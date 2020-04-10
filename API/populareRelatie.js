@@ -23,10 +23,11 @@ var blackCards;
     }
 
     //echivalent cu select * from blackcard_whitecard_relation
-    dbo.collection("blackcard_whitecard_relation").find({}).toArray(function(err,collections){ 
+    await dbo.collection("blackcard_whitecard_relation").find({}).toArray(function(err,collections){ 
     if (err) throw err; 
     console.log(collections);
-    db.close();
     });
+
+    db.close();
 
 });
