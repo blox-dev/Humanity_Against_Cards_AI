@@ -28,6 +28,6 @@ var blackCards;
     console.log(collections);
     });
 
-    db.close();
+ db.close();
 
 });
