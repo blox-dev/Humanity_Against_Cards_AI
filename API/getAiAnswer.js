@@ -32,21 +32,28 @@ function selectBest(fitness) {
 }
 
 async function getAiAnswer(black_card, white_cards){
+    var client;
+  try{
+    client = await MongoClient.connect(uri,{ useNewUrlParser: true, useUnifiedTopology: true });
 
-  const client = await MongoClient.connect(uri,{ useNewUrlParser: true, useUnifiedTopology: true });
-
-  var relations = await client.db("HumansAgainstCards").collection("blackcard_whitecard_relation").find({ blackCardId:black_card, whiteCardId : { $in : white_cards } }).toArray();
-
-  //TODO: nu se inchide conexiunea tot timpul
-  await client.close();
-
-  var fitness = Array();
-
-  fitness = calculateFitness(relations);
-
-  var result = selectBest(fitness);
+    var relations = await client.db("HumansAgainstCards").collection("blackcard_whitecard_relation").find({ blackCardId:black_card, whiteCardId : { $in : white_cards } }).toArray();
   
-  console.log(white_cards[result]);
+    
+  
+    var fitness = Array();
+  
+    fitness = calculateFitness(relations);
+  
+    var result = selectBest(fitness);
+    
+    console.log(white_cards[result]);
+    }
+    catch (e) {
+        console.error(e);
+    }
+    finally {
+        await client.close();
+    }
+ 
 }
-
 exports.getAiAnswer = getAiAnswer;
