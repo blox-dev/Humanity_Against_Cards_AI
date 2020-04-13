@@ -12,13 +12,12 @@ superheros
 family
 food
 money
-truth
 organs
 human body parts
 agriculture
-adjectives
 alcohol
 text
 games
 memes
 
+miscellaneous
