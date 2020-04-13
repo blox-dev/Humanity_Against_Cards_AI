@@ -19,4 +19,6 @@ agriculture
 adjectives
 alcohol
 text
+games
+memes
 
