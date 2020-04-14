@@ -23,10 +23,10 @@
       - {"answer":"Success","result":{"_id":"2","text":"Autocannibalism."}}
     - pentru *trainAi*: {*"black_card"*: "JSON.stringify(blackCard)a", *"white_card"*: "JSON.stringify(whiteCard)" }
       - intoarce doar un mesaj de succes
-      - {"answer":"Success","result":"30"}
+      - {"answer":"Success"}
     - pentru *getProbability*: {}
       - intoarce un mesaj de succes precum si o valoare intre 0 si 100
-      - {"answer":"Success"}
+      - {"answer":"Success","result":"30"}
     - pentru *setProbability*: {*"p"*: "probability"}, unde 0<=probability<=100
       - intoarce doar un mesaj de succes
       - {"answer":"Success"}
