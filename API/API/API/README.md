@@ -1,6 +1,6 @@
 # instantiere:
   - trebuie descarcat fisierul api.js intr-un folder separat
-  - in acest folder se deschide ruleaza comenzile npm init (se apasa apoi enter pana se termina)
+  - in acest folder se deschide si ruleaza comenzile npm init (se apasa apoi enter pana se termina)
   - se ruleaza npm install express --save
   - se ruleaza npm install mongodb
   - se deschide serverul prin node api.js
