@@ -80,6 +80,29 @@ class AI{
         });
         return tmp;
     }
+    async trainAi(white_card,black_card) {
+        console.log("da");
+        var client;
+        try {
+            client = await MongoClient.connect(uri,{ useNewUrlParser: true, useUnifiedTopology: true });
+            var rel1= await client.db("HumansAgainstCards").collection("blackcard_whitecard_relation").find({ blackCardId:black_card, whiteCardId :white_card}).toArray();
+            console.log(rel1);
+            var myquery = { "blackCardId":black_card,"whiteCardId":white_card };
+            var newvalues = { $set: {"value":rel1[0].value+1 } };
+            await client.db("HumansAgainstCards").collection("blackcard_whitecard_relation").updateOne(myquery,newvalues);
+            var rel2= await client.db("HumansAgainstCards").collection("blackcard_whitecard_relation").find({ blackCardId:black_card, whiteCardId :white_card}).toArray();
+            console.log(rel2); 
+            return "Success";
+        }
+        catch (e) {
+                return "Error";
+                console.error(e);
+        }
+        finally {
+            await client.close();
+        }
+    
+    }
 }
 
 app.listen(port,()=> {
@@ -95,17 +118,33 @@ var x=JSON.parse(req.query.param);
 // console.log("white_cards.text", x.white_cards[0].text);
 // console.log(x);
 var aiAnswer=new AI(req.query.room_id);
-(async ()=> {
-    r=await aiAnswer.getAiAnswer(x.black_card, x.white_cards);
-    // console.log(r);
-    return r;
-    
-})().then(result=>{
-    var answer=new Object();
-    answer["answer"]="Success";
-    answer["result"]=result;
+if (req.query.request==="getAiAnswer"){
+    (async ()=> {
+        r=await aiAnswer.getAiAnswer(x.black_card, x.white_cards);
+        // console.log(r);
+        return r;
+        
+    })().then(result=>{
+        var answer=new Object();
+        answer["answer"]="Success";
+        answer["result"]=result;
 
-    res.send(JSON.stringify(answer));
-});
+        res.send(JSON.stringify(answer));
+    });
+} else if (req.query.request==="trainAi"){
+    (async ()=> {
+        r=await aiAnswer.trainAi(parseInt(x.black_card._id), parseInt(x.white_card._id));
+        return r;
+        
+    })().then(result=>{
+        var answer=new Object();
+        answer["answer"]=result;
+        res.send(JSON.stringify(answer));
+    });
+} else {
+    res.send(JSON.stringify("Nu e trainAi sau getAiAnswer"));
+}
+
 //res.send('da');
 })
+
