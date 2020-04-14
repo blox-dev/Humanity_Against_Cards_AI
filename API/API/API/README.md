@@ -42,5 +42,7 @@
     
 # Posibile erori
 
+  - alte requesturi in afara de **getAiAnswer** nu au fost tratate
+
   - nu este tratata exceptia pentru momentul in care nu se primeste raspuns, deci in aceste cazuri fie trebuie trimise requesturi noi, fie trebuie restartat serverul
 
