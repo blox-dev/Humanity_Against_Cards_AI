@@ -17,21 +17,31 @@ class AI{
         this.room_id=room_id;
     }
     async getAiAnswer(black_card, white_cards) {
-        var a=black_card; var b=white_cards;
+        /* var a=black_card; var b=white_cards;
         black_card=parseInt(a);
-        white_cards=b.map(Number);
+        white_cards=b.map(Number); */
         var client;
         try {
             client = await MongoClient.connect(uri,{ useNewUrlParser: true, useUnifiedTopology: true });
-
-            var relations = await client.db("HumansAgainstCards").collection("blackcard_whitecard_relation").find({ blackCardId:black_card, whiteCardId : { $in : white_cards } }).toArray();
+            // console.log("black_card", black_card);
+            // console.log("white_cards",white_cards);
+            var white_ids=Array();
+            white_cards.forEach(i=>white_ids.push(i._id));
+            // console.log("white_ids", white_ids);
+            // console.log("black_card", black_card._id)
+            var a=parseInt(black_card._id);
+            var b=white_ids.map(Number);
+            console.log("a ", a, " b ", b);
+            var relations = await client.db("HumansAgainstCards").collection("blackcard_whitecard_relation").find({ blackCardId:a, whiteCardId : { $in : b } }).toArray();
             
+            console.log(relations);
+
             var fitness = Array();
 
             fitness = this.calculateFitness(relations);
 
             var result = this.selectBest(fitness);
-
+            // console.log(result, "result");
             return white_cards[result];
 
         }
@@ -77,20 +87,25 @@ console.log('listen port 8000');
 })
 //create api
 app.get('/ai', (req,res)=>{
-    var r;
-    console.log(req.query.room_id);
-    console.log(req.query.request);
-    console.log(req.query.param);
-    var x=JSON.parse(req.query.param);
+var r;
+console.log(req.query.room_id);
+console.log(req.query.request);
+console.log(req.query.param);
+var x=JSON.parse(req.query.param);
+// console.log("white_cards.text", x.white_cards[0].text);
+// console.log(x);
+var aiAnswer=new AI(req.query.room_id);
+(async ()=> {
+    r=await aiAnswer.getAiAnswer(x.black_card, x.white_cards);
+    // console.log(r);
+    return r;
+    
+})().then(result=>{
+    var answer=new Object();
+    answer["answer"]="Success";
+    answer["result"]=result;
 
-    var aiAnswer=new AI(req.query.room_id);
-    (async ()=> {
-        r=await aiAnswer.getAiAnswer(x.black_card, x.white_cards);
-        return r;
-    })().then(result=>{
-        var answer=new Object();
-        answer["answer"]="Success";
-        answer["result"]=result;
     res.send(JSON.stringify(answer));
-    });
+});
+//res.send('da');
 })
