@@ -22,21 +22,21 @@
     - pentru *setProbability*: {*"p"*: "probability"}, unde 0<=probability<=100
       -intoarce doar un mesaj de succes
     - exemple de utilizare: 
-      - 
-      ```javascript
-      http://localhost:8000/ai?room_id=1&request=getAiAnswer&param={"black_card": "1",  "white_cards": ["1", "2", "3", "4"]}
-      ```
-      - 
-      ```javascript
-      http://localhost:8000/ai?room_id=1&request=trainAi&param={"black_card": "1", "white_card": "2"}
-      ```
-      - 
-      ```javascript
-      http://localhost:8000/ai?room_id=1&request=getProbability&param={}
-      ```
-      - 
-      ```javascript
-      http://localhost:8000/ai?room_id=1&request=setProbability&param={"p": "30"}
-      ```
+
+  ```javascript
+  http://localhost:8000/ai?room_id=1&request=getAiAnswer&param={"black_card": "1",  "white_cards": ["1", "2", "3", "4"]}
+  ```
+
+  ```javascript
+  http://localhost:8000/ai?room_id=1&request=trainAi&param={"black_card": "1", "white_card": "2"}
+  ```
+
+  ```javascript
+  http://localhost:8000/ai?room_id=1&request=getProbability&param={}
+  ```
+
+  ```javascript
+  http://localhost:8000/ai?room_id=1&request=setProbability&param={"p": "30"}
+  ```
     
   
