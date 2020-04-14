@@ -4,6 +4,10 @@
   - se ruleaza npm install express --save
   - se ruleaza npm install mongodb
   - se deschide serverul prin node api.js
+# resultatul apelarii
+  - apelarea la serviciul **getAiAnswer** dupa protocolul expus mai jos va rezulta in toarcerea de catre AI a alegerii acestuia, o carte alba(sau mai multe, daca black_card.pick>1)
+  - apelarea **getAiAnswer** trebuie facuta la fiecare runda a jocului
+  - apelarea la **trainAi** trebuie facuta la finalul fiecarei runde, dupa ce o carte alba a fost declarata castigatoare de catre czar. Se trimit ca parametrii cartea neagra din runda respectiva si cartea (cartile) albe castigatoare
 # mod de folosire
   - AI-ul poate fi accesat ca API dupa modelul urmator: 
   - localhost:8000/ai
