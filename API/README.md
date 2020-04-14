@@ -32,7 +32,7 @@ http://localhost:8000/ai?room_id=1&request=getAiAnswer&param={"black_card": { "i
 ```
 
 ```javascript
-http://localhost:8000/ai?room_id=1&request=trainAi&param={"black_card": { id: 1, text: "I got 99 problems but  ain't one.", pick: 1 }, "white_card": { "_id": "1", "text":  "Man meat."}}
+http://localhost:8000/ai?room_id=1&request=trainAi&param={"black_card": { "_id": "1", "text": "I got 99 problems but  ain't one.", "pick": "1" }, "white_card": { "_id": "1", "text":  "Man meat."}}
 ```
 
 ```javascript
