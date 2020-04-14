@@ -56,4 +56,6 @@ http://localhost:8000/ai?room_id=1&request=setProbability&param={"p": "30"}
   - doar **getAiAnswer** si **trainAi** sunt tratate
 
   - nu este tratata exceptia pentru momentul in care nu se primeste raspuns, deci in aceste cazuri fie trebuie trimise requesturi noi, fie trebuie restartat serverul
+  
+  - nu sunt tratate cazurile in care pick != 1
 
