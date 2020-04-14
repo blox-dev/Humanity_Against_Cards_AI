@@ -31,10 +31,10 @@ class AI{
             // console.log("black_card", black_card._id)
             var a=parseInt(black_card._id);
             var b=white_ids.map(Number);
-            console.log("a ", a, " b ", b);
+            // console.log("a ", a, " b ", b);
             var relations = await client.db("HumansAgainstCards").collection("blackcard_whitecard_relation").find({ blackCardId:a, whiteCardId : { $in : b } }).toArray();
             
-            console.log(relations);
+            // console.log(relations);
 
             var fitness = Array();
 
