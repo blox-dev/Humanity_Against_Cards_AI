@@ -364,89 +364,173 @@ actors
 200:Lockjaw.
 human body parts
 201:Eugenics.
+science
 202:A good sniff.
+miscelaneous
 203:Friendly fire.
+terrorism
 204:The taint; the grundle; the fleshy fun-bridge.
+memes
 205:Wearing underwear inside-out to avoid doing laundry.
+clothes
 206:Hurricane Katrina.
+miscelaneous
 207:Free samples.
+alcohol
 208:Jerking off into a pool of children's tears.
+sexual
 209:A foul mouth.
+human body parts
 211:Republicans.
+politics
 212:Explosions.
+terrorism
 213:Michelle Obama's arms.
+human body parts
 214:Getting really high.
+alcohol+drugs
 216:Sarah Palin.
+politics
 217:The &Uuml;bermensch.
+racism
 218:Altar boys.
+religion
 219:My soul.
+miscelaneous
 221:Pedophiles.
+sexual
 222:72 virgins.
+sexual
 223:Pabst Blue Ribbon.
+alcohol
 224:Domino's&trade; Oreo&trade; Dessert Pizza.
+food
 226:The Blood of Christ.
+religion
 228:My collection of high-tech sex toys.
+sexual
 229:A middle-aged man on roller skates.
+games
 230:Bitches.
+sexual
 231:Bill Nye the Science Guy.
+science
 232:Italians.
+nations
 233:A windmill full of corpses.
+terrorism
 234:Adderall&trade;.
+science
 235:Crippling debt.
+money
 236:A stray pube.
+human body parts
 237:Prancing.
+games
 239:A brain tumor.
+disease
 240:Leprosy.
+disease
 241:Puppies!
+animals
 242:Bees?
+animals
 243:Frolicking.
+games
 244:Repression.
+miscelaneous
 245:Road head.
+miscelaneous
 246:A bag of magic beans.
+science
 248:Dead parents.
+family
 249:Public ridicule.
+racism
 250:A mating display.
+sexual
 251:A mime having a stroke.
+games
 252:Stephen Hawking talking dirty.
+sexual?
 253:African children.
+nations+family
 254:Mouth herpes.
+disease
 255:Overcompensation.
+money
 256:Riding off into the sunset.
+miscelaneous
 257:Being on fire.
+miscelaneous/terrorism :)
 258:Tangled Slinkys.
+wouldn't search it/human body parts
 259:Civilian casualties.
+terrorism
 260:Auschwitz.
+politics
 262:Not reciprocating oral sex.
+sexual
 263:Lactation.
+food
 264:Being fabulous.
+actors/singers
 265:Shaquille O'Neal's acting career.
+actors
 266:My relationship status.
+sexual
 267:Asians who aren't good at math.
+racism
 268:Alcoholism.
+alcohol
 269:Incest.
+sexual
 270:Grave robbing.
+terrorism
 271:Hope.
+state of mind
 272:8 oz. of sweet Mexican black-tar heroin.
+alcohol
 274:Winking at old people.
+sexual
 275:The Jews.
+racism
 276:Justin Bieber.
+singers
 278:A lifetime of sadness.
+state of mind
 279:The Hamburglar.
+food
 280:Swooping.
+miscelaneous
 282:New Age music.
+music
 284:The Kool-Aid Man.
+superheroes
 285:A hot mess.
+miscelaneous
 287:Lumberjack fantasies.
+agriculture
 288:The gays.
+sexual
 289:Scientology.
+science
 290:Estrogen.
+sexual
 291:GoGurt&reg;.
+food
 292:Judge Judy.
+politics
 293:Dick fingers.
+sexual
 294:Racism.
+racism
 296:Police brutality.
+politics
 298:The Virginia Tech Massacre.
+terrorism
 299:When you fart and a little bit comes out.
+sexual
 300:Oompa-Loompas.
 music
 301:A fetus.
