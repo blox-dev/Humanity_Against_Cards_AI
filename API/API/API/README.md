@@ -24,21 +24,27 @@
       -intoarce doar un mesaj de succes
     - exemple de utilizare: 
 
-  ```javascript
-  http://localhost:8000/ai?room_id=1&request=getAiAnswer&param={"black_card": "1",  "white_cards": ["1", "2", "3", "4"]}
-  ```
 
-  ```javascript
-  http://localhost:8000/ai?room_id=1&request=trainAi&param={"black_card": "1", "white_card": "2"}
-  ```
+```javascript
+http://localhost:8000/ai?room_id=1&request=getAiAnswer&param={"black_card": "1",  "white_cards": ["1", "2", "3", "4"]}
+```
 
-  ```javascript
-  http://localhost:8000/ai?room_id=1&request=getProbability&param={}
-  ```
 
-  ```javascript
-  http://localhost:8000/ai?room_id=1&request=setProbability&param={"p": "30"}
-  ```
+```javascript
+http://localhost:8000/ai?room_id=1&request=getAiAnswer&param={"black_card": "3",  "white_cards": ["11", "22", "33", "44", "55", "66", "77", "88", "99", "100"]}
+```
+
+```javascript
+http://localhost:8000/ai?room_id=1&request=trainAi&param={"black_card": "1", "white_card": "2"}
+```
+
+```javascript
+http://localhost:8000/ai?room_id=1&request=getProbability&param={}
+```
+
+```javascript
+http://localhost:8000/ai?room_id=1&request=setProbability&param={"p": "30"}
+```
     
 # Posibile erori
 
