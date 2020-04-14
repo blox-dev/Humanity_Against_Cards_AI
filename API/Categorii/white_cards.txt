@@ -532,63 +532,124 @@ science
 497:Being emotionally and physically dominated by Gordon Ramsay.
 498:Kevin Bacon Bits.
 500:Soup that's better than pussy.
+sexual
 501:Sucking down thousands of pounds of krill every day.
+animals
 502:A Mexican child trapped inside of a burrito.
+nations
 503:Clamping down on a gazelle's jugular and tasting its warm life waters.
+animals
 504:Committing suicide at the Old Country Buffet.
+actors
 505:Father's forbidden chocolates.
+family
 506:Jizz Twinkies.
+sexual
 507:The Hellman's Mayonnaise Corporation.
+food
 509:The inaudible screams of carrots.
+food
 511:Reconciling quantum theory with general relativity.
+science
 512:Electroejaculating a capuchin monkey.
+sexual
 513:Insufficient serotonin.
+science
 515:Getting really worried about global warming for a few seconds.
+science
 516:Infinity.
+text
 518:Uranus.
+sexual
 519:Being knowledgeable in a narrow domain that nobody understands or cares about.
+science
 520:Achieving reproductive success.
+sexual
 521:Slowly evaporating.
+science
 522:The quiet majesty of the sea turtle.
+animals
 523:A 0.7 waist-to-hip ratio.
+singers
 524:Fun and interesting facts about rocks.
+science
 525:Photosynthesis.
+science
 527:Failing the Turing test.
+science
 528:Explosive decompression.
+science
 529:Driving into a tornado to learn about tornadoes.
+science
 530:David Attenborough watching us mate.
+actors
 531:3.7 billion years of evolution.
+science
 532:The Sun engulfing the Earth.
+science
 533:A complete inability to understand anyone else's perspective.
+text
 535:A man from Craigslist.
+miscellaneous
 537:A respectful discussion of race and gender on the Internet.
+politics
 539:Destroying Dick Cheney's last horcrux.
+actors
 540:<i>Game of Thrones</i> spoilers.
+actors
 541:Getting teabagged by a fifth grader in Call of Duty.
+games
 542:Goats screaming like people.
+animals
 543:Googling.
+miscellaneous
 545:Matching with Mom on Tinder.
+sexual
 546:My browser history.
+sexual
 548:Pretending to be black.
+racism
 549:Smash Mouth.
+actors
 551:That thing on the Internet everyone's talking about.
+text
 553:YouTube comments.
+text
 554:Poutine.
+food
 555:Newfies.
+racism
 556:The Official Languages Act. La Loi sur les langues officielles.
+text
 557:Terry Fox's prosthetic leg.
+actors
 558:The FLQ.
+politics
 559:Canada: America's Hat.
+nations
 560:Don Cherry's wardrobe.
+actors
 561:Burning down the White House.
+politics
 562:Heritage minutes.
+text
 563:Homo milk.
+sexual
 564:Naked News.
+sexual
 565:Mr. Dressup.
+sexual
 567:Being Canadian.
+nations
 568:Snotsicles.
+human body parts
 569:The Famous Five.
+actors
 570:Schmirler the Curler.
+actors
 571:Stephen Harper.
+actors
 572:A Molson muscle.
+food
 573:The Royal Canadian Mounted Police.
+nations
