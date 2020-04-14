@@ -1,118 +1,209 @@
 White Cards:
 
 0:Coat hanger abortions.
+miscellaneous(?)
 1:Man meat.
+food
 2:Autocannibalism.
+food
 3:Vigorous jazz hands.
+memes
 4:Flightless birds.
+animals
 6:Doing the right thing.
+miscellaneous
 7:The violation of our most basic human rights.
+miscellaneous(?)
 8:Viagra&reg;.
+sexual
 9:Self-loathing.
+miscellaneous
 10:Spectacular abs.
+human body parts
 11:A balanced breakfast.
+food
 12:Roofies.
+(?) - drugs
 14:Amputees.
+human body parts(?)
 15:The Big Bang.
+science
 16:Former President George W. Bush.
+politics
 17:The Rev. Dr. Martin Luther King, Jr.
+politics
 18:Smegma.
+miscellaneous(?)
 19:Being marginalized.
+racism
 20:Cuddling.
+sexual
 21:Laying an egg.
+miscellaneous(?)
 22:The Pope.
+religion
 23:Aaron Burr.
+politics
 24:Genital piercings.
+sexual
 25:Fingering.
+sexual
 27:Horse meat.
+food
 28:Fear itself.
+terrorism
 29:Science.
+science
 30:Elderly Japanese men.
+nations
 31:Stranger danger.
+memes
 32:The terrorists.
+terrorism
 33:Praying the gay away.
+religion
 35:Ethnic cleansing.
+racism
 36:Cheating in the Special Olympics.
+miscellaneous
 38:Bingeing and purging.
+food
 39:Making a pouty face.
+miscellaneous
 40:William Shatner.
+actors
 41:Heteronormativity.
+sexual/politics
 42:Nickelback.
+singers
 43:Tom Cruise.
+actors
 44:The profoundly handicapped.
+miscellaneous
 45:The placenta.
+human body parts
 46:Chainsaws for hands.
+human body parts
 47:Arnold Schwarzenegger.
+actors
 48:An icepick lobotomy.
+memes
 49:Goblins.
+memes
 50:Object permanence.
+miscellaneous
 51:Dying.
+diseases
 52:Foreskin.
+human body parts
 53:A falcon with a cap on its head.
+nations/animals
 54:Hormone injections.
+science
 55:Dying of dysentery.
+diseases
 56:Sexy pillow fights.
+sexual
 57:The invisible hand.
+human body parts
 58:A really cool hat.
+clothes
 59:Sean Penn.
+actors
 60:Heartwarming orphans.
+family
 62:The Three-Fifths compromise.
+politics
 64:Men.
+family(?)/miscellaneous
 65:Historically black colleges.
+racism
 67:Raptor attacks.
+animals
 68:Agriculture.
+agriculture
 69:Vikings.
+nations
 70:Pretending to care.
+miscellaneous
 71:The Underground Railroad.
+racism
 72:My humps.
+human body parts
 74:Geese.
+animals
 75:Bling.
+money
 76:Sniffing glue.
+miscellaneous
 77:The South.
+politics
 78:An Oedipus complex.
+sexual
 79:Eating all of the cookies before the AIDS bake-sale.
+miscellaneous
 80:Sexting.
+sexual
 81:YOU MUST CONSTRUCT ADDITIONAL PYLONS.
+memes
 83:Sunshine and rainbows.
+miscellaneous
 84:Count Chocula.
+food
 85:Sharing needles.
+memes
 86:Being rich.
+money
 87:Skeletor.
+memes
 88:A sausage festival.
+food
 89:Michael Jackson.
+singers
 90:Emotions.
+miscellaneous
 91:Farting and walking away.
+miscellaneous
 92:The Chinese gymnastics team.
+nations
 93:Necrophilia.
+sexual
 94:Spontaneous human combustion.
+diseases
 95:Yeast.
+food
 96:Leaving an awkward voicemail.
+miscellaneous
 97:Dick Cheney.
+politics
 98:White people.
+racism
 99:Penis envy.
+sexual
 100:Teaching a robot to love.
+science
 101:Sperm whales.
 animals
 102:Scrubbing under the folds.
 human body parts
 104:Whipping it out.
-?
+sexual
 105:Catapults.
 miscellaneous?
 106:Masturbation.
 sexual
 107:Natural selection.
-miscellanous
+science
 108:Opposable thumbs.
 human body parts
 110:AIDS.
-miscellaneous
+diseases
 111:The KKK.
 racism
 112:Figgy pudding.
 food
 113:Seppuku.
-memes?
+memes
 114:Gandhi.
 nations
 115:Preteens.
@@ -120,7 +211,7 @@ miscellanous/memes?
 117:Five-Dollar Footlongs&trade;.
 food
 118:Land mines.
-terrorism?
+terrorism
 119:A sea of troubles.
 books?
 120:A zesty breakfast burrito.
@@ -130,7 +221,7 @@ actors
 122:Friction.
 science
 123:Balls.
-miscellanous/memes?
+memes/human body parts
 124:Dental dams.
 sexual
 126:A tiny horse.
@@ -138,41 +229,41 @@ animals
 127:Waiting 'til marriage.
 family
 128:Authentic Mexican cuisine.
-food
+food/nations
 129:Genghis Khan.
 nations
 130:Old-people smell.
-?
+miscellaneous
 131:Feeding Rosie O'Donnell.
-racism?
+memes/miscellaneous
 133:Friends with benefits.
-miscellanous
+sexual
 134:The token minority.
-politics?
+politics/racism
 135:The Tempur-Pedic&reg; Swedish Sleep System&trade;.
 memes
 136:A thermonuclear detonation.
-terrorism?
+terrorism
 137:Take-backsies.
 family
 138:The Rapture.
-miscellnous
+religion
 139:A cooler full of organs.
-organs
+human body parts
 140:Sweet, sweet vengeance.
-miscellnous
+miscellaneous
 141:RoboCop.
-actors
+actors/memes
 142:Keanu Reeves.
 actors
 143:Drinking alone.
 family
 144:Giving 110%.
-?
+miscellaneous
 145:Flesh-eating bacteria.
 science
 146:The American Dream.
-nations/memes?
+nations/memes
 147:Taking off your shirt.
 miscellaneous
 148:Me time.
@@ -267,7 +358,7 @@ miscellaneous
 197:Licking things to claim them as your own.
 memes?
 198:The heart of a child.
-???
+human body parts
 199:Robert Downey, Jr.
 actors
 200:Lockjaw.
@@ -359,7 +450,7 @@ human body parts
 300:Oompa-Loompas.
 music
 301:A fetus.
-organs
+human body parts
 302:Obesity.
 food
 304:Hot people.
@@ -437,9 +528,9 @@ politics
 345:Dead babies.
 terrorism
 346:Child beauty pageants.
-text
+miscellaneous
 347:AXE Body Spray.
-text
+miscellaneous
 348:Centaurs.
 animals
 349:Copping a feel.
@@ -465,9 +556,9 @@ actors
 359:Kamikaze pilots.
 nations
 360:Dry heaving.
-organs
+diseases
 361:Active listening.
-text
+miscellaneous
 362:Ghosts.
 superheroes
 363:The Hustle.
@@ -491,13 +582,13 @@ sexual
 372:A Bop It&trade;.
 games
 373:Expecting a burp and vomiting on the floor.
-organs
+diseases
 374:Horrifying laser hair removal accidents.
 human body parts
 375:Boogers.
-organs
+miscellaneous
 376:Unfathomable stupidity.
-text
+miscellaneous
 377:Breaking out into song and dance.
 singers
 378:Soup that is too hot.
@@ -519,7 +610,7 @@ terrorism
 389:Crystal meth.
 alcohol
 390:Exactly what you'd expect.
-text
+miscellaneous
 391:Natural male enhancement.
 sexual
 393:Inappropriate yodeling.
@@ -648,7 +739,7 @@ science
 515:Getting really worried about global warming for a few seconds.
 science
 516:Infinity.
-text
+miscellaneous
 518:Uranus.
 sexual
 519:Being knowledgeable in a narrow domain that nobody understands or cares about.
@@ -678,7 +769,7 @@ science
 532:The Sun engulfing the Earth.
 science
 533:A complete inability to understand anyone else's perspective.
-text
+miscellaneous
 535:A man from Craigslist.
 miscellaneous
 537:A respectful discussion of race and gender on the Internet.
@@ -702,15 +793,15 @@ racism
 549:Smash Mouth.
 actors
 551:That thing on the Internet everyone's talking about.
-text
+miscellaneous
 553:YouTube comments.
-text
+miscellaneous
 554:Poutine.
 food
 555:Newfies.
 racism
 556:The Official Languages Act. La Loi sur les langues officielles.
-text
+miscellaneous
 557:Terry Fox's prosthetic leg.
 actors
 558:The FLQ.
@@ -722,7 +813,7 @@ actors
 561:Burning down the White House.
 politics
 562:Heritage minutes.
-text
+miscellaneous
 563:Homo milk.
 sexual
 564:Naked News.

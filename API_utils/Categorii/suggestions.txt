@@ -1,4 +1,3 @@
-meat
 science
 clothes
 singers
@@ -8,7 +7,7 @@ actors
 terrorism
 nations
 music
-superheros
+superheroes
 family
 food
 money
@@ -16,11 +15,12 @@ organs
 human body parts
 agriculture
 alcohol
-text
 games
 memes
-racism 
+racism
 sexual
 politics
+religion
+diseases
 
 miscellaneous
