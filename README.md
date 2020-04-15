@@ -1,5 +1,7 @@
 # Humanity_Against_Cards_AI
 
+## Ce este important se gaseste in /API
+
 ## Old
 ##### Surse utile:
 https://sqlitebrowser.org/ --> editor de fisiere .db
