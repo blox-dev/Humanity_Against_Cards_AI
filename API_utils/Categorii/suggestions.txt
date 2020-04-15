@@ -2,7 +2,6 @@ science
 clothes
 singers
 animals
-books
 actors
 terrorism
 nations
@@ -11,10 +10,8 @@ superheroes
 family
 food
 money
-organs
 human body parts
-agriculture
-alcohol
+alcohol and drugs
 games
 memes
 racism
@@ -23,5 +20,6 @@ politics
 religion
 diseases
 state of mind
+disgusting
 
 miscellaneous
