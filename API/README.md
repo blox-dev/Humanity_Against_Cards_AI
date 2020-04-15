@@ -1,6 +1,6 @@
 # instantiere:
   - trebuie descarcat fisierul api.js intr-un folder separat
-  - in acest folder se deschide si ruleaza comenzile npm init (se apasa apoi enter pana se termina)
+  - in acest folder in care se afla api.js se deschide si ruleaza comenzile npm init (se apasa apoi enter pana se termina, sau se seteaza api.js ca entry point)
   - se ruleaza npm install express --save
   - se ruleaza npm install mongodb
   - se deschide serverul prin node api.js
@@ -19,9 +19,12 @@
     - setProbability
   - parametrul 3: (**param**), contine parametrii fiecarui tip de request.
     - pentru *getAiAnswer*: {*"black_card"*: "JSON.stringify(blackCard)", *"white_cards"*: JSON.stringify(whiteCardsList) }
+      - whiteCardsList este un array de array-uri : [[card1], [card2], [card3], ..]
+      - atunci cand AI-ul este czar pot fi array-uri de forma : [[card1_1, card1_2], [card2_1, card2_1], ..]
       - intoarce un mesaj de succes si doar unul dintre whiteCardsList in format JSON
       - {"answer":"Success","result":[{"_id":"2","text":"Autocannibalism."}]}
-    - pentru *trainAi*: {*"black_card"*: "JSON.stringify(blackCard)a", *"white_card"*: "JSON.stringify(whiteCard)" }
+    - pentru *trainAi*: {*"black_card"*: "JSON.stringify(blackCard)a", *"white_cards"*: "JSON.stringify(whiteCards)" }
+      - in acest caz, whiteCards este doar un array: [card], sau [card1, card2, ..]
       - intoarce doar un mesaj de succes
       - {"answer":"Success"}
     - pentru *getProbability*: {}
@@ -56,6 +59,5 @@ http://localhost:8000/ai?room_id=1&request=setProbability&param={"p": "30"}
   - doar **getAiAnswer** si **trainAi** sunt tratate
 
   - nu este tratata exceptia pentru momentul in care nu se primeste raspuns, deci in aceste cazuri fie trebuie trimise requesturi noi, fie trebuie restartat serverul
-  
-  - nu sunt tratate cazurile in care pick != 1, se intoarce tot o singura carte
+
 
