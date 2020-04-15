@@ -17,6 +17,11 @@ class AI{
         this.room_id=room_id;
     }
     async getAiAnswer(black_card, white_cards) {
+
+        console.log(white_cards);
+        if (white_cards[0].length==1){
+            console.log("Are lungimea 1");
+        } else console.log("Are lungimea", white_cards[0].length);
         /* var a=black_card; var b=white_cards;
         black_card=parseInt(a);
         white_cards=b.map(Number); */
@@ -26,7 +31,7 @@ class AI{
             // console.log("black_card", black_card);
             // console.log("white_cards",white_cards);
             var white_ids=Array();
-            white_cards.forEach(i=>white_ids.push(i._id));
+            white_cards.forEach(i=>white_ids.push(i[0]._id));
             // console.log("white_ids", white_ids);
             // console.log("black_card", black_card._id)
             var a=parseInt(black_card._id);
