@@ -52,6 +52,10 @@ http://localhost:8000/ai?room_id=1&request=trainAi&param={"black_card": { "_id":
 ```
 
 ```javascript
+http://localhost:8000/ai?room_id=1&request=trainAi&param={"black_card": { "_id": "2", "text": "I got 99 problems but  ain't one.", "pick": "1" }, "white_cards": [{ "_id": "1", "text":  "Man meat."}, { "_id": "2", "text":  "Man meat."}]}
+```
+
+```javascript
 http://localhost:8000/ai?room_id=1&request=getProbability&param={}
 ```
 
