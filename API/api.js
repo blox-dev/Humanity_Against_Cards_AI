@@ -42,12 +42,14 @@ class AI{
 
             var result = this.selectBest(fitness);
             // console.log(result, "result");
-            return white_cards[result];
+            var ret=Array();
+            ret.push(white_cards[result]);
+            return ret;
 
         }
         catch (e) {
             console.error(e);
-            return white_cards[0]
+            return Array(white_cards[0]);
         }
         finally {
             await client.close();
@@ -80,14 +82,15 @@ class AI{
         });
         return tmp;
     }
-    async trainAi(white_card,black_card) {
+    async trainAi(black_card, white_card) {
         console.log("da");
         var client;
         try {
             client = await MongoClient.connect(uri,{ useNewUrlParser: true, useUnifiedTopology: true });
+
             var rel1= await client.db("HumansAgainstCards").collection("blackcard_whitecard_relation").find({ blackCardId:black_card, whiteCardId :white_card}).toArray();
             console.log(rel1);
-            var myquery = { "blackCardId":black_card,"whiteCardId":white_card };
+            var myquery = { "blackCardId":black_card,"whiteCardId":white_card};
             var newvalues = { $set: {"value":rel1[0].value+1 } };
             await client.db("HumansAgainstCards").collection("blackcard_whitecard_relation").updateOne(myquery,newvalues);
             var rel2= await client.db("HumansAgainstCards").collection("blackcard_whitecard_relation").find({ blackCardId:black_card, whiteCardId :white_card}).toArray();
@@ -95,8 +98,9 @@ class AI{
             return "Success";
         }
         catch (e) {
-                return "Error";
-                console.error(e);
+            console.error(e);
+            return "Error";
+                
         }
         finally {
             await client.close();
@@ -133,7 +137,7 @@ if (req.query.request==="getAiAnswer"){
     });
 } else if (req.query.request==="trainAi"){
     (async ()=> {
-        r=await aiAnswer.trainAi(parseInt(x.black_card._id), parseInt(x.white_card._id));
+        r=await aiAnswer.trainAi(parseInt(x.black_card._id), parseInt(x.white_cards[0]._id));
         return r;
         
     })().then(result=>{
