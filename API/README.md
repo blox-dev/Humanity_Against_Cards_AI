@@ -23,6 +23,7 @@
       - numai atunci cand AI-ul este czar pot fi array-uri de forma : [[card1_1, card1_2], [card2_1, card2_1], ..]
       - intoarce un mesaj de succes si doar unul dintre arrayurile din whiteCardsList in format JSON
       - {"answer":"Success","result":[{"_id":"2","text":"Autocannibalism."}]}
+      - {"answer":"Success","result":[{"_id":"1","text":"Man meat."},{"_id":"2","text":"Autocannibalism."}]}
     - pentru *trainAi*: {*"black_card"*: "JSON.stringify(blackCard)a", *"white_cards"*: "JSON.stringify(whiteCards)" }
       - in acest caz, whiteCards este doar un array: [card], sau [card1, card2, ..]
       - intoarce doar un mesaj de succes
