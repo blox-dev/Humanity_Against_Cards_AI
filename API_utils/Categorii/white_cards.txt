@@ -1,7 +1,7 @@
 White Cards:
 
 0:Coat hanger abortions.
-miscellaneous(?)
+disgusting
 1:Man meat.
 food
 2:Autocannibalism.
@@ -13,7 +13,7 @@ animals
 6:Doing the right thing.
 miscellaneous
 7:The violation of our most basic human rights.
-miscellaneous(?)
+miscellaneous
 8:Viagra&reg;.
 sexual
 9:Self-loathing.
@@ -23,9 +23,9 @@ human body parts
 11:A balanced breakfast.
 food
 12:Roofies.
-(?) - drugs
+alcohol and drugs
 14:Amputees.
-human body parts(?)
+human body parts
 15:The Big Bang.
 science
 16:Former President George W. Bush.
@@ -33,13 +33,13 @@ politics
 17:The Rev. Dr. Martin Luther King, Jr.
 politics
 18:Smegma.
-miscellaneous(?)
+disgusting
 19:Being marginalized.
 racism
 20:Cuddling.
 sexual
 21:Laying an egg.
-miscellaneous(?)
+miscellaneous
 22:The Pope.
 religion
 23:Aaron Burr.
@@ -115,13 +115,13 @@ family
 62:The Three-Fifths compromise.
 politics
 64:Men.
-family(?)/miscellaneous
+family
 65:Historically black colleges.
 racism
 67:Raptor attacks.
 animals
 68:Agriculture.
-agriculture
+miscellaneous
 69:Vikings.
 nations
 70:Pretending to care.
@@ -141,7 +141,7 @@ politics
 78:An Oedipus complex.
 sexual
 79:Eating all of the cookies before the AIDS bake-sale.
-miscellaneous
+diseases
 80:Sexting.
 sexual
 81:YOU MUST CONSTRUCT ADDITIONAL PYLONS.
@@ -151,7 +151,7 @@ miscellaneous
 84:Count Chocula.
 food
 85:Sharing needles.
-memes
+alcohol and drugs
 86:Being rich.
 money
 87:Skeletor.
@@ -161,9 +161,9 @@ food
 89:Michael Jackson.
 singers
 90:Emotions.
-miscellaneous
+state of mind
 91:Farting and walking away.
-miscellaneous
+disgusting(?)
 92:The Chinese gymnastics team.
 nations
 93:Necrophilia.
@@ -185,17 +185,17 @@ science
 101:Sperm whales.
 animals
 102:Scrubbing under the folds.
-human body parts
+human body parts/disgusting
 104:Whipping it out.
 sexual
 105:Catapults.
-miscellaneous?
+miscellaneous
 106:Masturbation.
 sexual
 107:Natural selection.
 science
 108:Opposable thumbs.
-human body parts
+human body parts/science
 110:AIDS.
 diseases
 111:The KKK.
@@ -207,13 +207,13 @@ memes
 114:Gandhi.
 nations
 115:Preteens.
-miscellanous/memes?
+miscellanous/memes?/family
 117:Five-Dollar Footlongs&trade;.
 food
 118:Land mines.
 terrorism
 119:A sea of troubles.
-books?
+state of mind
 120:A zesty breakfast burrito.
 food
 121:Christopher Walken.
@@ -233,7 +233,7 @@ food/nations
 129:Genghis Khan.
 nations
 130:Old-people smell.
-miscellaneous
+disgusting
 131:Feeding Rosie O'Donnell.
 memes/miscellaneous
 133:Friends with benefits.
@@ -245,7 +245,7 @@ memes
 136:A thermonuclear detonation.
 terrorism
 137:Take-backsies.
-family
+family/miscellaneous
 138:The Rapture.
 religion
 139:A cooler full of organs.
@@ -253,11 +253,11 @@ human body parts
 140:Sweet, sweet vengeance.
 miscellaneous
 141:RoboCop.
-actors/memes
+superheroes/memes
 142:Keanu Reeves.
 actors
 143:Drinking alone.
-family
+family/state of mind
 144:Giving 110%.
 miscellaneous
 145:Flesh-eating bacteria.
@@ -265,7 +265,7 @@ science
 146:The American Dream.
 nations/memes
 147:Taking off your shirt.
-miscellaneous
+sexual/human body parts
 148:Me time.
 miscellaneous
 149:A murder most foul.
@@ -273,15 +273,15 @@ singers
 150:The inevitable heat death of the universe.
 science
 151:The folly of man.
-science?
+science/state of mind
 152:That thing that electrocutes your abs.
-memes
+memes/human body parts
 153:Cards Against Humanity.
 games
 154:Fiery poops.
-memes?
+memes?/disgusting
 155:Poor people.
-nations?
+money
 156:Edible underpants.
 clothes
 157:Britney Spears at 55.
@@ -289,18 +289,18 @@ singers
 158:All-you-can-eat shrimp for $4.99.
 food
 159:Pooping back and forth. Forever.
-miscellaneous?
+disgusting/memes?
 160:Fancy Feast&reg;.
 food
 161:Jewish fraternities.
 racism
 163:Pulling out.
 164:Picking up girls at the abortion clinic.
-racism?
+disgusting?/miscellaneous
 166:The Holy Bible.
-miscellaneous
+religion
 168:Ronald Reagan.
-nations
+politics
 169:Vehicular manslaughter.
 terrorism
 170:Nipple blades.
@@ -310,7 +310,7 @@ clothes
 173:Hulk Hogan.
 actors
 174:Daddy issues.
-family
+family/sexual
 175:The hardworking Mexican.
 racism
 176:Natalie Portman.
@@ -318,23 +318,23 @@ actors
 177:Waking up half-naked in a Denny's parking lot.
 miscellaneous
 178:God.
-miscellaneous
+religion
 179:Sean Connery.
 actors
 180:Saxophone solos.
-singers/memes?
+music
 181:Gloryholes.
 sexual
 182:The World of Warcraft.
 games
 183:Homeless people.
-miscellanous
+miscellanous/politics
 184:Scalping.
-human body parts?
+terrorism/disgusting
 185:Darth Vader.
 actors
 186:Eating the last known bison.
-???
+state of mind/miscellaneous
 187:Guys who don't call.
 miscellanous
 188:Hot Pockets&reg;.
@@ -342,7 +342,7 @@ food
 189:A time travel paradox.
 science
 190:The milk man.
-family
+family/food
 191:Testicular torsion.
 sexual
 192:Dropping a chandelier on your enemies and riding the rope up.
@@ -350,13 +350,13 @@ miscellanous
 193:World peace.
 politics
 194:A salty surprise.
-food?
+food/sexual
 195:Poorly-timed Holocaust jokes.
 racism
 196:Smallpox blankets.
 miscellaneous
 197:Licking things to claim them as your own.
-memes?
+memes/state of mind
 198:The heart of a child.
 human body parts
 199:Robert Downey, Jr.
@@ -364,7 +364,7 @@ actors
 200:Lockjaw.
 human body parts
 201:Eugenics.
-science
+science/racism
 202:A good sniff.
 miscelaneous
 203:Friendly fire.
@@ -372,23 +372,23 @@ terrorism
 204:The taint; the grundle; the fleshy fun-bridge.
 memes
 205:Wearing underwear inside-out to avoid doing laundry.
-clothes
+clothes/disgusting
 206:Hurricane Katrina.
-miscelaneous
+miscellaneous
 207:Free samples.
-alcohol
+alcohol and drugs
 208:Jerking off into a pool of children's tears.
 sexual
 209:A foul mouth.
-human body parts
+human body parts/miscellaneous
 211:Republicans.
 politics
 212:Explosions.
 terrorism
 213:Michelle Obama's arms.
-human body parts
+human body parts/disgusting(?)
 214:Getting really high.
-alcohol+drugs
+alcohol and drugs
 216:Sarah Palin.
 politics
 217:The &Uuml;bermensch.
@@ -396,13 +396,13 @@ racism
 218:Altar boys.
 religion
 219:My soul.
-miscelaneous
+religion/state of mind
 221:Pedophiles.
 sexual
 222:72 virgins.
-sexual
+sexual/religion
 223:Pabst Blue Ribbon.
-alcohol
+alcohol and drugs
 224:Domino's&trade; Oreo&trade; Dessert Pizza.
 food
 226:The Blood of Christ.
@@ -410,7 +410,7 @@ religion
 228:My collection of high-tech sex toys.
 sexual
 229:A middle-aged man on roller skates.
-games
+games/memes
 230:Bitches.
 sexual
 231:Bill Nye the Science Guy.
@@ -418,15 +418,15 @@ science
 232:Italians.
 nations
 233:A windmill full of corpses.
-terrorism
+terrorism/disgusting
 234:Adderall&trade;.
-science
+science/alcohol and drugs
 235:Crippling debt.
 money
 236:A stray pube.
 human body parts
 237:Prancing.
-games
+animals/state of mind
 239:A brain tumor.
 disease
 240:Leprosy.
@@ -436,11 +436,11 @@ animals
 242:Bees?
 animals
 243:Frolicking.
-games
+state of mind
 244:Repression.
-miscelaneous
+politics
 245:Road head.
-miscelaneous
+sexual
 246:A bag of magic beans.
 science
 248:Dead parents.
@@ -452,15 +452,15 @@ sexual
 251:A mime having a stroke.
 games
 252:Stephen Hawking talking dirty.
-sexual?
+science/sexual?
 253:African children.
-nations+family
+nations/racism
 254:Mouth herpes.
 disease
 255:Overcompensation.
 money
 256:Riding off into the sunset.
-miscelaneous
+miscellaneous/state of mind
 257:Being on fire.
 miscelaneous/terrorism :)
 258:Tangled Slinkys.
@@ -468,13 +468,13 @@ wouldn't search it/human body parts
 259:Civilian casualties.
 terrorism
 260:Auschwitz.
-politics
+politics/racism
 262:Not reciprocating oral sex.
 sexual
 263:Lactation.
 food
 264:Being fabulous.
-actors/singers
+state of mind/miscellaneous
 265:Shaquille O'Neal's acting career.
 actors
 266:My relationship status.
@@ -482,17 +482,17 @@ sexual
 267:Asians who aren't good at math.
 racism
 268:Alcoholism.
-alcohol
+alcohol and drugs
 269:Incest.
-sexual
+sexual/family/disgusting
 270:Grave robbing.
 terrorism
 271:Hope.
 state of mind
 272:8 oz. of sweet Mexican black-tar heroin.
-alcohol
+alcohol and drugs
 274:Winking at old people.
-sexual
+sexual/disgusting?
 275:The Jews.
 racism
 276:Justin Bieber.
@@ -502,7 +502,7 @@ state of mind
 279:The Hamburglar.
 food
 280:Swooping.
-miscelaneous
+miscellaneous
 282:New Age music.
 music
 284:The Kool-Aid Man.
@@ -510,7 +510,7 @@ superheroes
 285:A hot mess.
 miscelaneous
 287:Lumberjack fantasies.
-agriculture
+sexual
 288:The gays.
 sexual
 289:Scientology.
@@ -522,7 +522,7 @@ food
 292:Judge Judy.
 politics
 293:Dick fingers.
-sexual
+sexual/human body parts
 294:Racism.
 racism
 296:Police brutality.
@@ -530,15 +530,15 @@ politics
 298:The Virginia Tech Massacre.
 terrorism
 299:When you fart and a little bit comes out.
-sexual
+disgusting
 300:Oompa-Loompas.
-music
+memes/singers/music
 301:A fetus.
-human body parts
+human body parts/disgusting
 302:Obesity.
-food
+diseases
 304:Hot people.
-?
+sexual
 305:BATMAN!!!
 superheroes
 306:Black people.
@@ -554,11 +554,11 @@ sexual
 312:A Super Soaker&trade; full of cat pee.
 games
 313:Muhammed (Praise Be Unto Him).
-terrorism
+terrorism/religion
 314:Puberty.
 sexual
 315:A disappointing birthday party.
-?
+state of mind/miscellaneous
 316:An erection that lasts longer than four hours.
 sexual
 317:White privilege.
@@ -578,7 +578,7 @@ nations
 327:An M. Night Shyamalan plot twist.
 actors
 328:Getting drunk on mouthwash.
-alcohol
+alcohol and drugs
 329:Lunchables&trade;
 food
 330:Women in yogurt commercials.
@@ -586,7 +586,7 @@ food
 331:John Wilkes Booth.
 actors
 332:Powerful thighs.
-sexual
+human body parts
 333:Mr. Clean, right behind you.
 memes
 334:Multiple stab wounds.
@@ -594,7 +594,7 @@ terrorism
 335:Cybernetic enhancements.
 science
 336:Serfdom.
-agriculture
+politics
 337:Kanye West.
 actors
 338:Women's suffrage.
@@ -604,13 +604,13 @@ family
 341:The Dance of the Sugar Plum Fairy.
 music
 342:Lance Armstrong's missing testicle.
-sexual
+sexual/human body parts
 343:Parting the Red Sea.
-science
+science/religion
 344:The Amish.
-politics
+politics/nations
 345:Dead babies.
-terrorism
+terrorism/disgusting
 346:Child beauty pageants.
 miscellaneous
 347:AXE Body Spray.
@@ -620,17 +620,17 @@ animals
 349:Copping a feel.
 sexual
 350:Grandma.
-family
+family/disgusting
 351:Famine.
 food
 352:The Trail of Tears.
-racism
+racism/religion
 353:The miracle of childbirth.
 family
 354:Finger painting.
-family
+family/sexual/disgusting
 355:A monkey smoking a cigar.
-alcohol
+alcohol and drugs
 356:The Make-A-Wish&reg; Foundation.
 family
 357:Anal beads.
@@ -638,17 +638,17 @@ sexual
 358:The Force.
 actors
 359:Kamikaze pilots.
-nations
+nations/racism
 360:Dry heaving.
 diseases
 361:Active listening.
-miscellaneous
+state of mind
 362:Ghosts.
-superheroes
+superheroes/memes
 363:The Hustle.
-actors
+state of mind
 364:Peeing a little bit.
-sexual
+disgusting
 365:Another goddamn vampire movie.
 actors
 366:Shapeshifters.
@@ -662,17 +662,17 @@ animals
 370:A defective condom.
 sexual
 371:Teenage pregnancy.
-sexual
+sexual/family
 372:A Bop It&trade;.
 games
 373:Expecting a burp and vomiting on the floor.
-diseases
+disgusting
 374:Horrifying laser hair removal accidents.
-human body parts
+human body parts/disgusting
 375:Boogers.
-miscellaneous
+disgusting
 376:Unfathomable stupidity.
-miscellaneous
+state of mind
 377:Breaking out into song and dance.
 singers
 378:Soup that is too hot.
@@ -684,19 +684,19 @@ sexual
 381:MechaHitler.
 racism
 383:The true meaning of Christmas.
-politics
+politics/family
 384:My inner demons.
-miscellaneous
+state of mind
 386:My vagina.
 sexual
 388:Actually taking candy from a baby.
-terrorism
+terrorism/state of mind
 389:Crystal meth.
-alcohol
+alcohol and drugs
 390:Exactly what you'd expect.
 miscellaneous
 391:Natural male enhancement.
-sexual
+sexual/human body parts
 393:Inappropriate yodeling.
 music
 394:Lady Gaga.
@@ -708,7 +708,7 @@ superheroes
 397:A death ray.
 science
 398:Poor life choices.
-family
+family/state of mind
 399:A gentle caress of the inner thigh.
 sexual
 400:Embryonic stem cells.
@@ -880,17 +880,17 @@ memes
 498:Kevin Bacon Bits.
 ?
 500:Soup that's better than pussy.
-sexual
+sexual/food
 501:Sucking down thousands of pounds of krill every day.
-animals
+animals/disgusting
 502:A Mexican child trapped inside of a burrito.
-nations
+nations/racism
 503:Clamping down on a gazelle's jugular and tasting its warm life waters.
-animals
+animals/disgusting
 504:Committing suicide at the Old Country Buffet.
-actors
+memes
 505:Father's forbidden chocolates.
-family
+family/food
 506:Jizz Twinkies.
 sexual
 507:The Hellman's Mayonnaise Corporation.
@@ -902,15 +902,15 @@ science
 512:Electroejaculating a capuchin monkey.
 sexual
 513:Insufficient serotonin.
-science
+science/state of mind
 515:Getting really worried about global warming for a few seconds.
-science
+science/state of mind
 516:Infinity.
 miscellaneous
 518:Uranus.
 sexual
 519:Being knowledgeable in a narrow domain that nobody understands or cares about.
-science
+science/state of mind
 520:Achieving reproductive success.
 sexual
 521:Slowly evaporating.
@@ -918,7 +918,7 @@ science
 522:The quiet majesty of the sea turtle.
 animals
 523:A 0.7 waist-to-hip ratio.
-singers
+singers/human body parts
 524:Fun and interesting facts about rocks.
 science
 525:Photosynthesis.
@@ -928,15 +928,15 @@ science
 528:Explosive decompression.
 science
 529:Driving into a tornado to learn about tornadoes.
-science
+science/state of mind
 530:David Attenborough watching us mate.
 actors
 531:3.7 billion years of evolution.
 science
 532:The Sun engulfing the Earth.
-science
+science/religion
 533:A complete inability to understand anyone else's perspective.
-miscellaneous
+state of mind
 535:A man from Craigslist.
 miscellaneous
 537:A respectful discussion of race and gender on the Internet.
@@ -952,13 +952,13 @@ animals
 543:Googling.
 miscellaneous
 545:Matching with Mom on Tinder.
-sexual
+sexual/family/disgusting
 546:My browser history.
-sexual
+sexual/disgusting
 548:Pretending to be black.
 racism
 549:Smash Mouth.
-actors
+actors/music/singers
 551:That thing on the Internet everyone's talking about.
 miscellaneous
 553:YouTube comments.
@@ -990,7 +990,7 @@ sexual
 567:Being Canadian.
 nations
 568:Snotsicles.
-human body parts
+disgusting
 569:The Famous Five.
 actors
 570:Schmirler the Curler.
