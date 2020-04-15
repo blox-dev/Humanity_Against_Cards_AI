@@ -20,8 +20,8 @@
   - parametrul 3: (**param**), contine parametrii fiecarui tip de request.
     - pentru *getAiAnswer*: {*"black_card"*: "JSON.stringify(blackCard)", *"white_cards"*: JSON.stringify(whiteCardsList) }
       - whiteCardsList este un array de array-uri : [[card1], [card2], [card3], ..]
-      - atunci cand AI-ul este czar pot fi array-uri de forma : [[card1_1, card1_2], [card2_1, card2_1], ..]
-      - intoarce un mesaj de succes si doar unul dintre whiteCardsList in format JSON
+      - numai atunci cand AI-ul este czar pot fi array-uri de forma : [[card1_1, card1_2], [card2_1, card2_1], ..]
+      - intoarce un mesaj de succes si doar unul dintre arrayurile din whiteCardsList in format JSON
       - {"answer":"Success","result":[{"_id":"2","text":"Autocannibalism."}]}
     - pentru *trainAi*: {*"black_card"*: "JSON.stringify(blackCard)a", *"white_cards"*: "JSON.stringify(whiteCards)" }
       - in acest caz, whiteCards este doar un array: [card], sau [card1, card2, ..]
