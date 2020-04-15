@@ -5,7 +5,7 @@
   - se ruleaza npm install mongodb
   - se deschide serverul prin node api.js
 # resultatul apelarii
-  - apelarea la serviciul **getAiAnswer** dupa protocolul expus mai jos va rezulta in toarcerea de catre AI a alegerii acestuia, o carte alba(sau mai multe, daca black_card.pick>1)
+  - apelarea la serviciul **getAiAnswer** dupa protocolul expus mai jos va rezulta in toarcerea de catre AI a alegerii acestuia, un array de carti albe.
   - apelarea **getAiAnswer** trebuie facuta la fiecare runda a jocului
   - apelarea la **trainAi** trebuie facuta la finalul fiecarei runde, dupa ce o carte alba a fost declarata castigatoare de catre czar. Se trimit ca parametrii cartea neagra din runda respectiva si cartea (cartile) albe castigatoare
 # mod de folosire
@@ -20,7 +20,7 @@
   - parametrul 3: (**param**), contine parametrii fiecarui tip de request.
     - pentru *getAiAnswer*: {*"black_card"*: "JSON.stringify(blackCard)", *"white_cards"*: JSON.stringify(whiteCardsList) }
       - intoarce un mesaj de succes si doar unul dintre whiteCardsList in format JSON
-      - {"answer":"Success","result":{"_id":"2","text":"Autocannibalism."}}
+      - {"answer":"Success","result":[{"_id":"2","text":"Autocannibalism."}]}
     - pentru *trainAi*: {*"black_card"*: "JSON.stringify(blackCard)a", *"white_card"*: "JSON.stringify(whiteCard)" }
       - intoarce doar un mesaj de succes
       - {"answer":"Success"}
@@ -40,7 +40,7 @@ http://localhost:8000/ai?room_id=1&request=getAiAnswer&param={"black_card": { "_
 ```
 
 ```javascript
-http://localhost:8000/ai?room_id=1&request=trainAi&param={"black_card": { "_id": "1", "text": "I got 99 problems but  ain't one.", "pick": "1" }, "white_card": { "_id": "1", "text":  "Man meat."}}
+http://localhost:8000/ai?room_id=1&request=trainAi&param={"black_card": { "_id": "1", "text": "I got 99 problems but  ain't one.", "pick": "1" }, "white_cards": [{ "_id": "1", "text":  "Man meat."}]}
 ```
 
 ```javascript
@@ -57,5 +57,5 @@ http://localhost:8000/ai?room_id=1&request=setProbability&param={"p": "30"}
 
   - nu este tratata exceptia pentru momentul in care nu se primeste raspuns, deci in aceste cazuri fie trebuie trimise requesturi noi, fie trebuie restartat serverul
   
-  - nu sunt tratate cazurile in care pick != 1
+  - nu sunt tratate cazurile in care pick != 1, se intoarce tot o singura carte
 
