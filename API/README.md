@@ -39,11 +39,11 @@
 
 
 ```javascript
-http://localhost:8000/ai?room_id=1&request=getAiAnswer&param={"black_card": { "_id": "1", "text": "I got 99 problems but  ain't one.", "pick": "1" },  "white_cards": [[{ "_id": "1", "text":  "Man meat."}],  [{ "_id": "2", "text": "Autocannibalism."}]] }
+http://localhost:8000/ai?room_id=1&request=getAiAnswer&param={"black_card": { "_id": "1", "text": "I got 99 problems but  ain't one.", "pick": "1" },  "white_cards": [[{ "_id": "1", "text":  "Man meat."}], [{ "_id": "2", "text": "Autocannibalism."}], [{ "_id": "4", "text":  "Man meat."}], [{ "_id": "3", "text": "Autocannibalism."}]] }
 ```
 
 ```javascript
-http://localhost:8000/ai?room_id=1&request=getAiAnswer&param={"black_card": { "_id": "1", "text": "I got 99 problems but  ain't one.", "pick": "1" },  "white_cards": [[{ "_id": "1", "text":  "Man meat."}, { "_id": "2", "text": "Autocannibalism."}], [{ "_id": "2", "text": "Autocannibalism."}, { "_id": "1", "text":  "Man meat."}]] }
+http://localhost:8000/ai?room_id=1&request=getAiAnswer&param={"black_card": { "_id": "1", "text": "I got 99 problems but  ain't one.", "pick": "1" },  "white_cards": [[{ "_id": "1", "text":  "Man meat."}, { "_id": "2", "text": "Autocannibalism."}], [{ "_id": "3", "text": "Autocannibalism."}, { "_id": "4", "text":  "Man meat."}]] }
 ```
 
 ```javascript
