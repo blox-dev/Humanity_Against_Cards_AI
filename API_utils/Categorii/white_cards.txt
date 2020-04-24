@@ -11,13 +11,13 @@ memes
 4:Flightless birds.
 animals
 6:Doing the right thing.
-miscellaneous
+state of mind
 7:The violation of our most basic human rights.
-miscellaneous
+politics
 8:Viagra&reg;.
 sexual
 9:Self-loathing.
-miscellaneous
+state of mind
 10:Spectacular abs.
 human body parts
 11:A balanced breakfast.
@@ -39,7 +39,7 @@ racism
 20:Cuddling.
 sexual
 21:Laying an egg.
-miscellaneous
+animals
 22:The Pope.
 religion
 23:Aaron Burr.
@@ -65,11 +65,11 @@ religion
 35:Ethnic cleansing.
 racism
 36:Cheating in the Special Olympics.
-miscellaneous
+game and activities
 38:Bingeing and purging.
 food
 39:Making a pouty face.
-miscellaneous
+state of mind
 40:William Shatner.
 actors
 41:Heteronormativity.
@@ -79,7 +79,7 @@ singers
 43:Tom Cruise.
 actors
 44:The profoundly handicapped.
-miscellaneous
+disgusting
 45:The placenta.
 human body parts
 46:Chainsaws for hands.
@@ -91,7 +91,7 @@ memes
 49:Goblins.
 memes
 50:Object permanence.
-miscellaneous
+science
 51:Dying.
 diseases
 52:Foreskin.
@@ -121,11 +121,11 @@ racism
 67:Raptor attacks.
 animals
 68:Agriculture.
-miscellaneous
+science
 69:Vikings.
 nations
 70:Pretending to care.
-miscellaneous
+state of mind
 71:The Underground Railroad.
 racism
 72:My humps.
@@ -135,7 +135,7 @@ animals
 75:Bling.
 money
 76:Sniffing glue.
-miscellaneous
+disgusting
 77:The South.
 politics
 78:An Oedipus complex.
@@ -147,7 +147,7 @@ sexual
 81:YOU MUST CONSTRUCT ADDITIONAL PYLONS.
 memes
 83:Sunshine and rainbows.
-miscellaneous
+science
 84:Count Chocula.
 food
 85:Sharing needles.
@@ -173,7 +173,7 @@ diseases
 95:Yeast.
 food
 96:Leaving an awkward voicemail.
-miscellaneous
+games and activities
 97:Dick Cheney.
 politics
 98:White people.
@@ -189,7 +189,7 @@ disgusting
 104:Whipping it out.
 sexual
 105:Catapults.
-miscellaneous
+science
 106:Masturbation.
 sexual
 107:Natural selection.
@@ -251,7 +251,7 @@ religion
 139:A cooler full of organs.
 human body parts
 140:Sweet, sweet vengeance.
-miscellaneous
+games and activities
 141:RoboCop.
 superheroes
 142:Keanu Reeves.
@@ -267,7 +267,7 @@ nations
 147:Taking off your shirt.
 clothes
 148:Me time.
-miscellaneous
+state of mind
 149:A murder most foul.
 singers
 150:The inevitable heat death of the universe.
@@ -316,7 +316,7 @@ racism
 176:Natalie Portman.
 actors
 177:Waking up half-naked in a Denny's parking lot.
-miscellaneous
+disgusting
 178:God.
 religion
 179:Sean Connery.
@@ -334,9 +334,9 @@ terrorism
 185:Darth Vader.
 actors
 186:Eating the last known bison.
-miscellaneous
+animals
 187:Guys who don't call.
-miscellanous
+family
 188:Hot Pockets&reg;.
 food
 189:A time travel paradox.
@@ -354,7 +354,7 @@ food
 195:Poorly-timed Holocaust jokes.
 racism
 196:Smallpox blankets.
-miscellaneous
+diseases
 197:Licking things to claim them as your own.
 memes
 198:The heart of a child.
@@ -374,7 +374,7 @@ memes
 205:Wearing underwear inside-out to avoid doing laundry.
 clothes
 206:Hurricane Katrina.
-miscellaneous
+science
 207:Free samples.
 alcohol and drugs
 208:Jerking off into a pool of children's tears.
@@ -502,7 +502,7 @@ state of mind
 279:The Hamburglar.
 food
 280:Swooping.
-miscellaneous
+games and activities
 282:New Age music.
 music
 284:The Kool-Aid Man.
@@ -614,7 +614,7 @@ disgusting
 346:Child beauty pageants.
 games and activities
 347:AXE Body Spray.
-miscellaneous
+money
 348:Centaurs.
 animals
 349:Copping a feel.
@@ -694,7 +694,7 @@ state of mind
 389:Crystal meth.
 alcohol and drugs
 390:Exactly what you'd expect.
-miscellaneous
+state of mind
 391:Natural male enhancement.
 human body parts
 393:Inappropriate yodeling.
@@ -906,7 +906,7 @@ state of mind
 515:Getting really worried about global warming for a few seconds.
 science
 516:Infinity.
-miscellaneous
+science
 518:Uranus.
 sexual
 519:Being knowledgeable in a narrow domain that nobody understands or cares about.
@@ -938,7 +938,7 @@ religion
 533:A complete inability to understand anyone else's perspective.
 state of mind
 535:A man from Craigslist.
-miscellaneous
+games and activities
 537:A respectful discussion of race and gender on the Internet.
 politics
 539:Destroying Dick Cheney's last horcrux.
@@ -950,7 +950,7 @@ games and activities
 542:Goats screaming like people.
 animals
 543:Googling.
-miscellaneous
+games and activities
 545:Matching with Mom on Tinder.
 sexual
 546:My browser history.
@@ -960,15 +960,15 @@ racism
 549:Smash Mouth.
 memes
 551:That thing on the Internet everyone's talking about.
-miscellaneous
+memes
 553:YouTube comments.
-miscellaneous
+memes
 554:Poutine.
 food
 555:Newfies.
 racism
 556:The Official Languages Act. La Loi sur les langues officielles.
-miscellaneous
+nations
 557:Terry Fox's prosthetic leg.
 actors
 558:The FLQ.
@@ -980,7 +980,7 @@ actors
 561:Burning down the White House.
 politics
 562:Heritage minutes.
-miscellaneous
+family
 563:Homo milk.
 sexual
 564:Naked News.
