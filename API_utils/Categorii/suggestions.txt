@@ -1,25 +1,56 @@
 science
 clothes
-singers
 animals
 actors
 terrorism
 nations
-music
-superheroes
-family
-food
+music and singers- 22
+superheroes - 8
+family - 22
+food - 40
 money
 human body parts
 alcohol and drugs
-games
-memes
-racism
-sexual
-politics
+games and activities - 7
+memes - 35
+racism - 33
+sexual - 67
+politics - 29
 religion
-diseases
+diseases - 11
 state of mind
 disgusting
 
 miscellaneous
+6:Doing the right thing.
+7:The violation of our most basic human rights.
+9:Self-loathing.
+21:Laying an egg.
+36:Cheating in the Special Olympics.
+39:Making a pouty face.
+44:The profoundly handicapped.
+50:Object permanence.
+68:Agriculture.
+70:Pretending to care.
+76:Sniffing glue.
+83:Sunshine and rainbows.
+96:Leaving an awkward voicemail.
+105:Catapults.
+140:Sweet, sweet vengeance.
+148:Me time.
+177:Waking up half-naked in a Denny's parking lot.
+186:Eating the last known bison.
+196:Smallpox blankets.
+206:Hurricane Katrina.
+280:Swooping.
+347:AXE Body Spray.
+390:Exactly what you'd expect.
+516:Infinity.
+535:A man from Craigslist.
+543:Googling.
+551:That thing on the Internet everyone's talking about.
+553:YouTube comments.
+556:The Official Languages Act. La Loi sur les langues officielles.
+562:Heritage minutes.
+
+
