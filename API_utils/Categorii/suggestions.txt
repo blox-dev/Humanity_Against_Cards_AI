@@ -1,24 +1,24 @@
-science
-clothes
-animals
-actors
-terrorism
-nations
-music and singers- 22
+science - 35
+clothes - 7
+animals - 18
+actors - 31
+terrorism - 13
+nations - 15
+music and singers - 17
 superheroes - 8
-family - 22
+family - 16
 food - 40
-money
-human body parts
-alcohol and drugs
-games and activities - 7
-memes - 35
-racism - 33
-sexual - 67
-politics - 29
-religion
-diseases - 11
-state of mind
-disgusting
+money - 10
+human body parts - 21
+alcohol and drugs - 12
+games and activities - 20
+memes - 32
+racism - 30
+sexual - 57
+politics - 25
+religion - 13
+diseases - 12
+state of mind - 34
+disgusting - 28
 
 
