@@ -141,7 +141,7 @@ app.get('/ai', (req, res) => {
     var aiAnswer = new AI(req.query.room_id);
     if (req.query.request === "getAiAnswer") {
         (async () => {
-            r = await aiAnswer.getAiAnswer(x.black_card, x.white_cards);
+            r = await aiAnswer.getAiAnswer(x.black_card[0], x.white_cards);
             // console.log(r);
             return r;
 
