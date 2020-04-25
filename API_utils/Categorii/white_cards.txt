@@ -65,7 +65,7 @@ religion
 35:Ethnic cleansing.
 racism
 36:Cheating in the Special Olympics.
-game and activities
+games and activities
 38:Bingeing and purging.
 food
 39:Making a pouty face.
@@ -428,9 +428,9 @@ human body parts
 237:Prancing.
 games and activities
 239:A brain tumor.
-disease
+diseases
 240:Leprosy.
-disease
+diseases
 241:Puppies!
 animals
 242:Bees?
@@ -456,7 +456,7 @@ sexual
 253:African children.
 nations
 254:Mouth herpes.
-disease
+diseases
 255:Overcompensation.
 money
 256:Riding off into the sunset.
@@ -734,7 +734,7 @@ human body parts
 412:Getting married, having a few kids, buying some stuff, retiring to Florida, and dying.
 family
 413:A subscription to Men's Fitness.
-books
+family
 414:Crucifixion.
 religion
 415:A micropig wearing a tiny raincoat and booties.
@@ -788,7 +788,7 @@ politics
 443:Brown people.
 racism
 444:Rehab.
-alcohol
+alcohol and drugs
 445:Capturing Newt Gingrich and forcing him to dance in a monkey suit.
 memes
 446:Battlefield amputations.
@@ -838,7 +838,7 @@ politics
 474:Going on an epic adventure and learning a valuable lesson about friendship.
 state of mind
 475:Handcuffing a wizard to a radiator and dousing him with kerosene.
-meme
+memes
 476:Hodor.
 actors
 477:How hot Orlando Bloom was in <i>Lord of the Rings</i>.
@@ -848,11 +848,11 @@ memes
 479:Make-believe stories for autistic white men.
 racism
 480:Reading The Hobbit under the covers while mom and dad scream at each other downstairs.
-books
+family
 482:Shooting a wizard with a gun.
 memes
 483:The all-seeing Eye of Sauron.
-organs
+memes
 484:The card game Neil Gaiman wrote: "Three elves at a time."
 games and activities
 485:True love's kiss.
@@ -866,7 +866,7 @@ disgusting
 490:Real cheese flavor.
 food
 491:Swishing the wine around and sniffing it like a big fancy man.
-alcohol
+alcohol and drugs
 492:The Dial-A-Slice Apple Divider from Williams-Sonoma.
 food
 494:A belly full of hard-boiled eggs.
