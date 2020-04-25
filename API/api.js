@@ -158,7 +158,7 @@ app.get('/ai', (req, res) => {
             var r="Success"
             x.white_cards.forEach(i =>  {
                 (async () => {
-                    r1=await aiAnswer.trainAi(parseInt(x.black_card._id), parseInt(i._id));
+                    r1=await aiAnswer.trainAi(parseInt(x.black_card[0]._id), parseInt(i._id));
                     if (r1=="Error")
                         r=r1;
                 })();

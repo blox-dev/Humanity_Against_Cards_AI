@@ -13,20 +13,31 @@ public class DatabaseHandler {
     MongoDatabase database = Database.get_database();
     List<Document> whiteCards = new ArrayList<>();
     List<Document> blackCards = new ArrayList<>();
+    int blackIndex;
 
     void init(){
         database.getCollection("white_cards").find().forEach(whiteCards::add);
         database.getCollection("black_cards").find().forEach(blackCards::add);
+        blackIndex = (int)(Math.random() * blackCards.size());
     }
 
     Document getBlackCard() {
-        return blackCards.get((int) (Math.random() * blackCards.size()));
+        if(blackIndex>=blackCards.size())
+            blackIndex=0;
+        return blackCards.get(blackIndex++);
     }
 
     List<Document> getWhiteCards(){
         List<Document> tmp = new ArrayList<>();
-        for(int i = 0 ; i<10 ;i++){
-            tmp.add(whiteCards.get((int) (Math.random() * whiteCards.size())));
+        Document whiteCard;
+        int i=1;
+        tmp.add(whiteCards.get((int)(Math.random() * whiteCards.size())));
+        while(i<10){
+            whiteCard = whiteCards.get((int)(Math.random() * whiteCards.size()));
+            if(!tmp.contains(whiteCard)){
+                tmp.add(whiteCard);
+                i++;
+            }
         }
         return tmp;
     }
