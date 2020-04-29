@@ -1,18 +1,18 @@
-# instantiere:
+# Instantiere:
   - trebuie descarcat fisierul api.js intr-un folder separat
   - in acest folder in care se afla api.js se deschide si ruleaza comenzile npm init (se apasa apoi enter pana se termina, sau se seteaza api.js ca entry point)
   - se ruleaza npm install express --save
   - se ruleaza npm install mongodb
   - se deschide serverul prin node api.js
-# resultatul apelarii
-  - apelarea la serviciul **getAiAnswer** dupa protocolul expus mai jos va rezulta in toarcerea de catre AI a alegerii acestuia, un array de carti albe.
+# Rezultatul apelarii
+  - apelarea la serviciul **getAiAnswer** dupa protocolul expus mai jos va rezulta intoarcerea de catre AI a alegerii acestuia, un array de carti albe.
   - apelarea **getAiAnswer** trebuie facuta la fiecare runda a jocului
   - apelarea la **trainAi** trebuie facuta la finalul fiecarei runde, dupa ce o carte alba a fost declarata castigatoare de catre czar. Se trimit ca parametrii cartea neagra din runda respectiva si cartea (cartile) albe castigatoare
-# mod de folosire
+# Mod de folosire
   - AI-ul poate fi accesat ca API dupa modelul urmator: 
   - localhost:8000/ai
   - parametru 1: obligatoriu : (**room_id**), id-ul camerei de joc care face requestul pentru raspunsul AI-ului
-  - parametrul 2: requestul propriu-zis: (**request**) poate fi doar:
+  - parametrul 2: requestul propriu-zis: (**request**) poate avea una dintre valorile:
     - getAiAnswer
     - trainAi
     - getProbability
@@ -28,14 +28,14 @@
     - pentru *trainAi*: {*"black_card"*: "JSON.stringify(blackCard)", *"white_cards"*: "JSON.stringify(whiteCards)" }
       - blackCard este un array : [card]
       - in acest caz, whiteCards este doar un array: [card], sau [card1, card2, ..]
-      - intoarce doar un mesaj de succes
-      - {"answer":"Success"}
+      - intoarce un mesaj de succes/eroare si un mesaj generic asociat
+      - {"answer":"Success","result":"Updated the db successfully."}
     - pentru *getProbability*: {}
       - intoarce un mesaj de succes precum si o valoare intre 0 si 100
       - {"answer":"Success","result":"30"}
     - pentru *setProbability*: {*"p"*: "probability"}, unde 0<=probability<=100
-      - intoarce doar un mesaj de succes
-      - {"answer":"Success"}
+      - intoarce un mesaj de succes/eroare si un mesaj generic asociat
+      - {"answer":"Success","result":"Updated the probability successfully."}
     - exemple de utilizare: 
 
 
