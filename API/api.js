@@ -166,8 +166,8 @@ app.get('/ai', (req, res) => {
         (async () => {
             var result = await ai.getAiAnswer(parsedQuery.black_card[0], parsedQuery.white_cards);
             return ["Success",result];
-        })().then((answer,result) => {
-            res.send(JSON.stringify({answer:answer,result:result}));
+        })().then((result) => {
+            res.send(JSON.stringify({answer:result[0],result:result[1]}));
         });
     } else if (req.query.request === "trainAi") {
         (async () => {
@@ -181,8 +181,8 @@ app.get('/ai', (req, res) => {
             });
             return ["Success","Updated the db successfully."];
 
-        })().then((answer,result) => {
-            res.send(JSON.stringify({answer:answer,result:result}));
+        })().then((result) => {
+            res.send(JSON.stringify({answer:result[0],result:result[1]}));
         });
     } else {
         res.send(JSON.stringify({answer:"Error",result:"Invalid command."}));
