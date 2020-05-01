@@ -3,6 +3,7 @@ const express = require('express');
 // Express Initialize
 const app = express();
 const port = 8000;
+var probability;
 
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://fluffypanda:thefluffa5@humanityagainstcards-vfnzh.gcp.mongodb.net/test?retryWrites=true&w=majority";
@@ -33,6 +34,22 @@ class AI {
         this.category["disgusting"] = 0;
 
         this.room_id = room_id;
+    }
+
+    async setProbability(p){
+    try{
+        if(0 <= p <= 100)
+           probability = p;
+        return "Success";
+    }
+    catch (e) {
+            console.error(e);
+            return "Error";
+        }
+    }
+
+    async getProbability(){
+        return probability;
     }
 
     async getAiAnswer(black_card, white_cards) {
@@ -181,6 +198,22 @@ app.get('/ai', (req, res) => {
             });
             return ["Success","Updated the db successfully."];
 
+        })().then((result) => {
+            res.send(JSON.stringify({answer:result[0],result:result[1]}));
+        });
+    } else if (req.query.request === "setProbability") {
+        (async () => {
+            var result = await ai.setProbability(parseInt.p);
+            if (result === "Error")
+                return [result, "Couldn\'t update the db."]
+            return ["Success", "Updated the probability successfully."];
+        })().then((result) => {
+            res.send(JSON.stringify({answer:result[0],result:result[1]}));
+        });
+    } else if (req.query.request === "getProbability") {
+        (async () => {
+            var result = await ai.getProbability();
+            return ["Success", result];
         })().then((result) => {
             res.send(JSON.stringify({answer:result[0],result:result[1]}));
         });
