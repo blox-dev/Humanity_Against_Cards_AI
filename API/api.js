@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 const port = 8000;
 var probability;//not needed anymore
-var ai_players;
+var ai_players=Array();
 
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://fluffypanda:thefluffa5@humanityagainstcards-vfnzh.gcp.mongodb.net/test?retryWrites=true&w=majority";
@@ -211,7 +211,7 @@ app.get('/ai', (req, res) => {
         });
     } else if (req.query.request === "setProbability") {
         (async () => {
-            var result = await ai.setProbability(parseInt.p);
+            var result = await ai.setProbability(parseInt(parsedQuery.p));
             if (result === "Error")
                 return [result, "Couldn\'t update the probability."]
             return ["Success", "Updated the probability successfully."];
@@ -221,6 +221,7 @@ app.get('/ai', (req, res) => {
     } else if (req.query.request === "getProbability") {
         (async () => {
             var result = await ai.getProbability();
+            console.log(result, "result");
             return ["Success", result];
         })().then((result) => {
             res.send(JSON.stringify({answer:result[0],result:result[1]}));
