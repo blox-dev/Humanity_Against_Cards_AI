@@ -1,41 +1,32 @@
+"use strict"
 //Require module
 const express = require('express');
 // Express Initialize
 const app = express();
 const port = 8000;
+
 var ai_players=Array();
 
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://fluffypanda:thefluffa5@humanityagainstcards-vfnzh.gcp.mongodb.net/test?retryWrites=true&w=majority";
 class AI {
-    constructor(room_id) {
-        this.probability=50;
-        this.category = {};
-        this.category["science"] = 0;
-        this.category["clothes"] = 0;
-        this.category["animals"] = 0;
-        this.category["actors"] = 0;
-        this.category["terrorism"] = 0;
-        this.category["nations"] = 0;
-        this.category["superheroes"] = 0;
-        this.category["family"] = 0;
-        this.category["singers"] = 0;
-        this.category["food"] = 0;
-        this.category["money"] = 0;
-        this.category["humanBodyParts"] = 0;
-        this.category["alcoholAndDrugs"] = 0;
-        this.category["gamesAndActivities"] = 0;
-        this.category["memes"] = 0;
-        this.category["racism"] = 0;
-        this.category["sexual"] = 0;
-        this.category["politics"] = 0;
-        this.category["religion"] = 0;
-        this.category["diseases"] = 0;
-        this.category["stateOfMind"] = 0;
-        this.category["disgusting"] = 0;
+    _constructor(room_id) {
+        this.probability = 50;
+        this.categorie = new Object();
+        this.categorie = {
+            science: 0, clothes: 0,
+            animals: 0, actors: 0, terrorism: 0, nations: 0,
+            music_and_singers: 0, superheroes: 0, family: 0,
+            food: 0, money: 0, human_body_parts: 0,
+            alcohol_and_drugs: 0, games_and_activities: 0, memes: 0,
+            racism: 0, sexual: 0, politics: 0, religion: 0, diseases: 0,
+            state_of_mind: 0, disgusting: 0
+        };
+        //console.log(categorie.science);
 
         this.room_id = room_id;
     }
+
 
     setProbability(p){
         if(0 <= p && p <= 100){
@@ -45,10 +36,21 @@ class AI {
         return "Error";
     }
 
+
     getProbability(){
         return this.probability;
     }
-
+    /*
+        update(room_id, winner_id) {
+            var rel1 = await client.db("HumansAgainstCards").collection("blackcard_whitecard_relation").find({whiteCardId: white_card }).toArray();
+            ai_players.forEach(i => {
+                if (i.room_id.equals(room_id)) {
+                    //get categoria cartii cu id-ul winner id
+                    //i.categorie.winner_id.categorie++;
+                }
+            })
+        }
+    */
     async getAiAnswer(black_card, white_cards) {
         var pick = black_card.pick;
         var client;
@@ -87,10 +89,10 @@ class AI {
 
             var result = Array();
             var pickedWhiteCard;
-            
-            while(result.length<pick){
-                pickedWhiteCard = this.selectBest(fitness);
-                if (flag){
+
+            while (result.length < pick) {
+                pickedWhiteCard = this.selectBest(fitness, probability);
+                if (flag) {
                     return white_cards[pickedWhiteCard];
                 }
                 if (!result.includes(white_cards[pickedWhiteCard][0]))
@@ -109,15 +111,43 @@ class AI {
     }
 
     selectBest(fitness) {
+        switch (this.probability) {
+            case 0: //random complet
+                return (int)(Math.random() * fitness.length);
 
-        var wheel = Array();
-        wheel.push(fitness[0]);
+            case 100: //roata-norocului
+                var wheel = Array();
+                wheel.push(fitness[0]);
 
-        for (var i = 1; i < fitness.length; i++) {
-            wheel.push(wheel[i - 1] + fitness[i]);
+                for (var i = 1; i < fitness.length; i++) {
+                    wheel.push(wheel[i - 1] + fitness[i]);
+                }
+
+                return this.select(wheel);
+
+            default: //proportional, cu cat e probability mai mare, cu atat e mai probabil sa fie alese cartile cu fitness mare
+                let sum; //suma totala a fitnesilor
+                let sume_partiale;
+                let copieFitness = fitness; //copie ca sa nu modificam vectorul fitness (si mai apoi sa il comparam cu acesta)
+                copieFitness.sort(function (a, b) { return a - b }); //sortare crescatoare
+                for (var i = 0; i < fitness.length; i++) { //toate
+                    sum += copieFitness[i]; //suma totala
+                    sume_partiale.push(sum); // sume partiale
+                }
+                let random = Math.random() * sum * (1 + this.probability / 50);//alegem un numar random intre 0 si suma... la p=0. Daca p=100, atunci random va fi de 3 ori mai mare decat de obicei, conducand la alegeri de fitneess mai mare 
+                //vom alege acel cartea cu cel mai mic fitness care este deasupra lui random
+                for (var i = 0; i < sume_partiale.length; i++)
+                    if (sume_partiale[i] > random) //am gasit indexul in sirul sortat
+                    {
+                        for (var j = 0; j < fitness.length; j++) // cautam elementul in vectorul initial;
+                            if (copieFitness[i] === fitness[j]) // este posibil sa existe duplicate de valori, dar nu conteaza, sunt la fel de bune
+                                return j;
+                    }
+                //daca nu am dat return pana acum, atunci a ramas elementul cu fitness-ul maxim
+                for (var j = 0; j < fitness.length; j++) // cautam elementul in vectorul initial;
+                    if (copieFitness[fitness.length - 1] === fitness[j]) // este posibil sa existe duplicate de valori, dar nu conteaza, sunt la fel de bune
+                        return j;
         }
-
-        return this.select(wheel);
     }
 
     select(wheel) {
@@ -136,6 +166,7 @@ class AI {
         });
         return tmp;
     }
+
     async trainAi(black_card, white_card) {
         var client;
         try {
@@ -174,45 +205,54 @@ app.get('/ai', (req, res) => {
 
     var parsedQuery = JSON.parse(req.query.param);
     var ai;
-    let position=search_room(req.query.room_id);
-    if (position===-1){
+    let position = search_room(req.query.room_id);
+    if (position === -1) {
         ai = new AI(req.query.room_id);
         ai_players.push(ai);
-    }else{
-        ai=ai_players[position];
+    } else {
+        ai = ai_players[position];
     }
 
-    if (req.query.request === "getAiAnswer") {
-        ai.getAiAnswer(parsedQuery.black_card[0], parsedQuery.white_cards)
-            .then(result => res.send(JSON.stringify({answer:"Success",result:result})));
+    switch (req.query.request) {
+        case "getAiAnswer":
+            ai.getAiAnswer(parsedQuery.black_card[0], parsedQuery.white_cards)
+                .then(result => res.send(JSON.stringify({ answer: "Success", result: result })));
+            break;
 
-    } else if (req.query.request === "trainAi") {
-        (async () => {
-            //white_cards.forEach(i => i.forEach(j => white_ids.push(j._id)));
-            for(let white_card of parsedQuery.white_cards){
-                var result = await ai.trainAi(parseInt(parsedQuery.black_card[0]._id), parseInt(white_card[0]._id));
-                if (result === "Error")
-                    return [result,"Couldn\'t update the db."];
-            }
-            return ["Success","Updated the db successfully."];
-        })().then((result) => {
-            res.send(JSON.stringify({answer:result[0],result:result[1]}));
-        });
-    } else if (req.query.request === "setProbability") {
+        case "trainAi":
+            (async () => {
+                //white_cards.forEach(i => i.forEach(j => white_ids.push(j._id)));
+                for (let white_card of parsedQuery.white_cards) {
+                    var result = await ai.trainAi(parseInt(parsedQuery.black_card[0]._id), parseInt(white_card[0]._id));
+                    if (result === "Error")
+                        return [result, "Couldn't update the db."];
+                }
+                return ["Success", "Updated the db successfully."];
+            })().then((result) => {
+                res.send(JSON.stringify({ answer: result[0], result: result[1] }));
+            });
+            break;
+
+        case "setProbability":
             var result = ai.setProbability(parseInt(parsedQuery.p));
             if (result === "Error")
-                res.send(JSON.stringify({answer:"Error",result:"Invalid probability."}));
-            res.send(JSON.stringify({answer:"Success",result:"Probability set to " + parsedQuery.p}));
-    } else if (req.query.request === "getProbability") {
+                res.send(JSON.stringify({ answer: "Error", result: "Invalid probability. Set 0-100" }));
+            res.send(JSON.stringify({ answer: "Success", result: "Probability set to " + parsedQuery.p }));
+            break;
+
+        case "getProbability":
             var probability = ai.getProbability();
-            res.send(JSON.stringify({answer:"Success",result:probability}));
-    } else {
-        res.send(JSON.stringify({answer:"Error",result:"Invalid command."}));
+            res.send(JSON.stringify({ answer: "Success", result: probability }));
+            break;
+
+        default:
+            res.send(JSON.stringify({ answer: "Error", result: "Invalid command." }));
+        }
     }
-});
-function search_room(room_id){
-    for (let i=0; i<ai_players.length; i++)
-        if (ai_players[i].room_id===room_id)
+);
+function search_room(room_id) {
+    for (let i = 0; i < ai_players.length; i++)
+        if (ai_players[i].room_id === room_id)
             return i;
     return -1;
 }
