@@ -10,9 +10,8 @@ var ai_players=Array();
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://fluffypanda:thefluffa5@humanityagainstcards-vfnzh.gcp.mongodb.net/test?retryWrites=true&w=majority";
 class AI {
-    _constructor(room_id) {
+    constructor(room_id) {
         this.probability = 50;
-        this.categorie = new Object();
         this.categorie = {
             science: 0, clothes: 0,
             animals: 0, actors: 0, terrorism: 0, nations: 0,
@@ -22,7 +21,6 @@ class AI {
             racism: 0, sexual: 0, politics: 0, religion: 0, diseases: 0,
             state_of_mind: 0, disgusting: 0
         };
-        //console.log(categorie.science);
 
         this.room_id = room_id;
     }
@@ -36,21 +34,10 @@ class AI {
         return "Error";
     }
 
-
     getProbability(){
         return this.probability;
     }
-    /*
-        update(room_id, winner_id) {
-            var rel1 = await client.db("HumansAgainstCards").collection("blackcard_whitecard_relation").find({whiteCardId: white_card }).toArray();
-            ai_players.forEach(i => {
-                if (i.room_id.equals(room_id)) {
-                    //get categoria cartii cu id-ul winner id
-                    //i.categorie.winner_id.categorie++;
-                }
-            })
-        }
-    */
+
     async getAiAnswer(black_card, white_cards) {
         var pick = black_card.pick;
         var client;
@@ -64,8 +51,6 @@ class AI {
             }
             console.log(white_cards);
             white_cards.forEach(i => i.forEach(j => white_ids.push(j._id)));
-
-            /* white_cards.forEach(i => i.forEach(j => console.log("i ", i, "j ", j))); */
 
             var blackCardId = parseInt(black_card._id);
             var whiteCardIds = white_ids.map(Number);
@@ -91,7 +76,7 @@ class AI {
             var pickedWhiteCard;
 
             while (result.length < pick) {
-                pickedWhiteCard = this.selectBest(fitness, probability);
+                pickedWhiteCard = this.selectBest(fitness, this.probability);
                 if (flag) {
                     return white_cards[pickedWhiteCard];
                 }
@@ -221,7 +206,6 @@ app.get('/ai', (req, res) => {
 
         case "trainAi":
             (async () => {
-                //white_cards.forEach(i => i.forEach(j => white_ids.push(j._id)));
                 for (let white_card of parsedQuery.white_cards) {
                     var result = await ai.trainAi(parseInt(parsedQuery.black_card[0]._id), parseInt(white_card[0]._id));
                     if (result === "Error")
@@ -250,6 +234,7 @@ app.get('/ai', (req, res) => {
         }
     }
 );
+
 function search_room(room_id) {
     for (let i = 0; i < ai_players.length; i++)
         if (ai_players[i].room_id === room_id)
