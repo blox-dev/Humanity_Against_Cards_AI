@@ -10,7 +10,7 @@ const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://fluffypanda:thefluffa5@humanityagainstcards-vfnzh.gcp.mongodb.net/test?retryWrites=true&w=majority";
 class AI {
     _constructor(room_id) {
-        this.probability=50;
+        this.probability = 99;
         this.categorie = new Object();
         this.categorie = {
             science: 0, clothes: 0,
@@ -39,6 +39,7 @@ class AI {
     }
     /*
         update(room_id, winner_id) {
+            var rel1 = await client.db("HumansAgainstCards").collection("blackcard_whitecard_relation").find({whiteCardId: white_card }).toArray();
             ai_players.forEach(i => {
                 if (i.room_id.equals(room_id)) {
                     //get categoria cartii cu id-ul winner id
@@ -47,7 +48,7 @@ class AI {
             })
         }
     */
-    async getAiAnswer(black_card, white_cards,probability) {
+    async getAiAnswer(black_card, white_cards) {
         var pick = black_card.pick;
         var client;
         var flag = true;
@@ -106,8 +107,8 @@ class AI {
         }
     }
 
-    selectBest(fitness, probability) {
-        switch (probability) {
+    selectBest(fitness) {
+        switch (this.probability) {
             case 0: //random complet
                 return (int)(Math.random() * fitness.length);
 
@@ -122,18 +123,27 @@ class AI {
                 return this.select(wheel);
 
             default: //proportional, cu cat e probability mai mare, cu atat e mai probabil sa fie alese cartile cu fitness mare
-                let sum;
+                let sum; //suma totala a fitnesilor
                 let sume_partiale;
-                for (var i = 0; i < fitness.length; i++) {
-                    sum += fitness[i]; //suma totala
+                let copieFitness = fitness; //copie ca sa nu modificam vectorul fitness (si mai apoi sa il comparam cu acesta)
+                copieFitness.sort(function (a, b) { return a - b }); //sortare crescatoare
+                for (var i = 0; i < fitness.length; i++) { //toate
+                    sum += copieFitness[i]; //suma totala
                     sume_partiale.push(sum); // sume partiale
                 }
-                let random = Math.random() * sum * (1 + p / 50);//alegem un numar random intre 0 si suma... la p=0. Daca p=100, atunci random va fi de 3 ori mai mare decat de obicei, conducand la alegeri de fitneess mai mare 
+                let random = Math.random() * sum * (1 + this.probability / 50);//alegem un numar random intre 0 si suma... la p=0. Daca p=100, atunci random va fi de 3 ori mai mare decat de obicei, conducand la alegeri de fitneess mai mare 
                 //vom alege acel cartea cu cel mai mic fitness care este deasupra lui random
                 for (var i = 0; i < sume_partiale.length; i++)
-                    if (sume_partiale[i] > random)
-                        return i;
-                return fitness.length-1;
+                    if (sume_partiale[i] > random) //am gasit indexul in sirul sortat
+                    {
+                        for (var j = 0; j < fitness.length; j++) // cautam elementul in vectorul initial;
+                            if (copieFitness[i] === fitness[j]) // este posibil sa existe duplicate de valori, dar nu conteaza, sunt la fel de bune
+                                return j;
+                    }
+                //daca nu am dat return pana acum, atunci a ramas elementul cu fitness-ul maxim
+                for (var j = 0; j < fitness.length; j++) // cautam elementul in vectorul initial;
+                    if (copieFitness[fitness.length - 1] === fitness[j]) // este posibil sa existe duplicate de valori, dar nu conteaza, sunt la fel de bune
+                        return j;
         }
     }
 
@@ -203,10 +213,10 @@ app.get('/ai', (req, res) => {
     switch (req.query.request) {
         case "getAiAnswer":
             if (parsedQuery.winner_id != "") //primul apel va fi mereu gol... de asemenea pentru a strica restul programului daca query-ul nu e complet
-               // ai.update(req.query.room_id, parsedQuery.winner_id);
+                // ai.update(req.query.room_id, parsedQuery.winner_id);
 
-            ai.getAiAnswer(parsedQuery.black_card[0], parsedQuery.white_cards)
-                .then(result => res.send(JSON.stringify({ answer: "Success", result: result })));
+                ai.getAiAnswer(parsedQuery.black_card[0], parsedQuery.white_cards, parsedQuery.probability || 100)
+                    .then(result => res.send(JSON.stringify({ answer: "Success", result: result })));
             break;
 
         case "trainAi":
