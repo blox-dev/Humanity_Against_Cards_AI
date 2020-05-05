@@ -10,7 +10,7 @@ const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://fluffypanda:thefluffa5@humanityagainstcards-vfnzh.gcp.mongodb.net/test?retryWrites=true&w=majority";
 class AI {
     _constructor(room_id) {
-
+        this.probability=50;
         this.categorie = new Object();
         this.categorie = {
             science: 0, clothes: 0,
@@ -205,7 +205,7 @@ app.get('/ai', (req, res) => {
             if (parsedQuery.winner_id != "") //primul apel va fi mereu gol... de asemenea pentru a strica restul programului daca query-ul nu e complet
                // ai.update(req.query.room_id, parsedQuery.winner_id);
 
-            ai.getAiAnswer(parsedQuery.black_card[0], parsedQuery.white_cards,parsedQuery.probability||100)
+            ai.getAiAnswer(parsedQuery.black_card[0], parsedQuery.white_cards)
                 .then(result => res.send(JSON.stringify({ answer: "Success", result: result })));
             break;
 
