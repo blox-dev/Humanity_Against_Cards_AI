@@ -159,6 +159,9 @@ class AI {
 
             var rel1 = await client.db("HumansAgainstCards").collection("blackcard_whitecard_relation").find({ blackCardId: black_card, whiteCardId: white_card }).toArray();
 
+            //aici vom incrementa categoria ultimei carti albe jucate:
+            this.categorie[rel1[0].category]++;
+            console.log(this.categorie);
             console.log(rel1);
 
             var myQuery = { "blackCardId": black_card, "whiteCardId": white_card };
