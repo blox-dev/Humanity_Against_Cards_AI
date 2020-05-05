@@ -136,6 +136,7 @@ class AI {
         });
         return tmp;
     }
+
     async trainAi(black_card, white_card) {
         var client;
         try {
