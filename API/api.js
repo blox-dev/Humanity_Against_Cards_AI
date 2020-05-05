@@ -4,13 +4,14 @@ const express = require('express');
 // Express Initialize
 const app = express();
 const port = 8000;
-var ai_players = Array();
+
+var ai_players=Array();
 
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://fluffypanda:thefluffa5@humanityagainstcards-vfnzh.gcp.mongodb.net/test?retryWrites=true&w=majority";
 class AI {
     _constructor(room_id) {
-        this.probability = 99;
+        this.probability = 50;
         this.categorie = new Object();
         this.categorie = {
             science: 0, clothes: 0,
@@ -26,15 +27,17 @@ class AI {
         this.room_id = room_id;
     }
 
-    setProbability(p) {
-        if (0 <= p && p <= 100) {
+
+    setProbability(p){
+        if(0 <= p && p <= 100){
             this.probability = p;
             return "Success";
         }
         return "Error";
     }
 
-    getProbability() {
+
+    getProbability(){
         return this.probability;
     }
     /*
@@ -212,11 +215,8 @@ app.get('/ai', (req, res) => {
 
     switch (req.query.request) {
         case "getAiAnswer":
-            if (parsedQuery.winner_id != "") //primul apel va fi mereu gol... de asemenea pentru a strica restul programului daca query-ul nu e complet
-                // ai.update(req.query.room_id, parsedQuery.winner_id);
-
-                ai.getAiAnswer(parsedQuery.black_card[0], parsedQuery.white_cards, parsedQuery.probability || 100)
-                    .then(result => res.send(JSON.stringify({ answer: "Success", result: result })));
+            ai.getAiAnswer(parsedQuery.black_card[0], parsedQuery.white_cards)
+                .then(result => res.send(JSON.stringify({ answer: "Success", result: result })));
             break;
 
         case "trainAi":
@@ -247,8 +247,8 @@ app.get('/ai', (req, res) => {
 
         default:
             res.send(JSON.stringify({ answer: "Error", result: "Invalid command." }));
+        }
     }
-}
 );
 function search_room(room_id) {
     for (let i = 0; i < ai_players.length; i++)
