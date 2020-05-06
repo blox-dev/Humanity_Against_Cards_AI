@@ -5,13 +5,14 @@ const express = require('express');
 const app = express();
 const port = 8000;
 
-var ai_players=Array();
+var ai_players = Array();
 
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://fluffypanda:thefluffa5@humanityagainstcards-vfnzh.gcp.mongodb.net/test?retryWrites=true&w=majority";
 class AI {
     constructor(room_id) {
         this.probability = 50;
+        this.categorie = {};
         this.categorie = {
             science: 0, clothes: 0,
             animals: 0, actors: 0, terrorism: 0, nations: 0,
@@ -25,16 +26,15 @@ class AI {
         this.room_id = room_id;
     }
 
-
-    setProbability(p){
-        if(0 <= p && p <= 100){
+    setProbability(p) {
+        if (0 <= p && p <= 100) {
             this.probability = p;
             return "Success";
         }
         return "Error";
     }
 
-    getProbability(){
+    getProbability() {
         return this.probability;
     }
 
@@ -71,18 +71,17 @@ class AI {
                 }
             }
             else fitness = fitness_aux;
-
+            console.log(fitness);
             var result = Array();
             var pickedWhiteCard;
 
             while (result.length < pick) {
-                pickedWhiteCard = this.selectBest(fitness, this.probability);
+                pickedWhiteCard = this.selectBest(fitness);
                 if (flag) {
                     return white_cards[pickedWhiteCard];
                 }
                 if (!result.includes(white_cards[pickedWhiteCard][0]))
                     result.push(white_cards[pickedWhiteCard][0]);
-
             }
             return result;
         }
@@ -111,15 +110,21 @@ class AI {
                 return this.select(wheel);
 
             default: //proportional, cu cat e probability mai mare, cu atat e mai probabil sa fie alese cartile cu fitness mare
-                let sum; //suma totala a fitnesilor
-                let sume_partiale;
-                let copieFitness = fitness; //copie ca sa nu modificam vectorul fitness (si mai apoi sa il comparam cu acesta)
+                let sum = 0; //suma totala a fitnesilor
+                let sume_partiale = [];
+                let copieFitness = fitness.slice(); //copie ca sa nu modificam vectorul fitness (si mai apoi sa il comparam cu acesta)
+                //aparent in JS daca copiezi vectori prin = e doar referinta si orice operatie asupra "copiei" va avea loc si asupra obiectului din care ai copiat
                 copieFitness.sort(function (a, b) { return a - b }); //sortare crescatoare
                 for (var i = 0; i < fitness.length; i++) { //toate
                     sum += copieFitness[i]; //suma totala
                     sume_partiale.push(sum); // sume partiale
                 }
-                let random = Math.random() * sum * (1 + this.probability / 50);//alegem un numar random intre 0 si suma... la p=0. Daca p=100, atunci random va fi de 3 ori mai mare decat de obicei, conducand la alegeri de fitneess mai mare 
+                let random = Math.random() * sum * (1 + this.probability / 50);//alegem un numar random intre 0 si suma... la p=0. Daca p=100, atunci random va fi de 3 ori mai mare decat de obicei, conducand la alegeri de fitness mai mare 
+                /*
+                console.log("Vectorul fitnss sortat:" + copieFitness);
+                console.log("Sumele partiale:" + sume_partiale);
+                console.log("Randomul ales:" + random);
+                */
                 //vom alege acel cartea cu cel mai mic fitness care este deasupra lui random
                 for (var i = 0; i < sume_partiale.length; i++)
                     if (sume_partiale[i] > random) //am gasit indexul in sirul sortat
@@ -147,11 +152,26 @@ class AI {
     calculateFitness(relations) {
         var tmp = Array();
         relations.forEach(i => {
-            tmp.push(i.value);
+            var categ = i.category; //categoria cartii careia i se calculeaza fitness-ul acu,
+            tmp.push(i.value * this.Fibo(this.categorie.categ));
         });
         return tmp;
     }
 
+    Fibo(n) { //Fibonacci recursiv pornind de la numere usor mai mici; Am ales 1 si 1.5 pentru ca ies niste numere "rotunde" (adica cu parte fractionala = 1/2^n);
+        if (n === 0 || typeof n === 'undefined')
+            return 1;
+        else if (n === 1)
+            return 1.5;
+        return (this.Fibo(n - 1) + this.Fibo(n - 2)) / (1.5 - this.probability / 100);
+    }
+    /* Am ales in Fibo sa implementez probabilitatea in felul urmator:
+    La p=0, este facut Fibonacci redus(impartindu-se la 1.5, numerele cresc foarte putin la fiecare iteratie)
+    La p=50, este Fibonacci normal (valorile * ~1.6 la fiecare alegere in plus)
+    La p=100, este Fibonacci accelerat (dublat) (valorile *3.2 la fiecare alegere) 
+    Pentru p mare, ar putea eventual exista riscul ca jucatorii sa aleaga intentionat alegeri "proaste" pentru a deruta AI-ul..
+     desi e greu de crezut ca ar fi critic pentru ca e important si fitness-ul de baza
+    */
     async trainAi(black_card, white_card) {
         var client;
         try {
@@ -209,6 +229,7 @@ app.get('/ai', (req, res) => {
 
         case "trainAi":
             (async () => {
+                //white_cards.forEach(i => i.forEach(j => white_ids.push(j._id)));
                 for (let white_card of parsedQuery.white_cards) {
                     var result = await ai.trainAi(parseInt(parsedQuery.black_card[0]._id), parseInt(white_card[0]._id));
                     if (result === "Error")
@@ -234,10 +255,9 @@ app.get('/ai', (req, res) => {
 
         default:
             res.send(JSON.stringify({ answer: "Error", result: "Invalid command." }));
-        }
     }
+}
 );
-
 function search_room(room_id) {
     for (let i = 0; i < ai_players.length; i++)
         if (ai_players[i].room_id === room_id)
