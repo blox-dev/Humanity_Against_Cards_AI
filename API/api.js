@@ -116,6 +116,7 @@ class AI {
                     sum += fitnessCopy[i]; //suma totala
                     partialSums.push(sum); // sume partiale
                 }
+
                 let random = Math.random() * sum * (1 + this.probability / 50);//alegem un numar random intre 0 si suma... la p=0. Daca p=100, atunci random va fi de 3 ori mai mare decat de obicei, conducand la alegeri de fitness mai mare
 
                 //vom alege cartea cu cel mai mic fitness care este deasupra lui random
@@ -144,14 +145,17 @@ class AI {
 
     calculateFitness(relations) {
         let tmp = Array();
-        relations.forEach(i => {
-            let cardCategory = i.category; //categoria cartii careia i se calculeaza fitness-ul acum
-            tmp.push(i.value * this.fibo(this.categories[cardCategory]));
+        relations.forEach(relation => {
+            let cardCategory = relation.category.replace(/ /g, "_"); //categoria cartii careia i se calculeaza fitness-ul acum
+            tmp.push(relation.value * this.fibo(this.categories[cardCategory]));
         });
         return tmp;
     }
-
-    fibo(n) { //fibonacci iterativ pornind de la numere usor mai mici; Am ales 1 si 1.5 pentru ca ies niste numere "rotunde" (adica cu parte fractionala = 1/2^n);
+    /*
+        fibonacci iterativ pornind de la numere usor mai mici; Am ales 1 si 1.5 pentru ca ies niste numere "rotunde"
+        (adica cu parte fractionala = 1/2^n);
+    */
+    fibo(n) {
         if (n === 0 || typeof n === 'undefined')
             return 1;
         else if (n === 1)
@@ -168,12 +172,13 @@ class AI {
 
         return c;
     }
-    /* Am ales in fibo sa implementez probabilitatea in felul urmator:
-    La p=0, este facut fibonacci redus(impartindu-se la 1.5, numerele cresc foarte putin la fiecare iteratie)
-    La p=50, este fibonacci normal (valorile * ~1.6 la fiecare alegere in plus)
-    La p=100, este fibonacci accelerat (dublat) (valorile *3.2 la fiecare alegere) 
-    Pentru p mare, ar putea eventual exista riscul ca jucatorii sa aleaga intentionat alegeri "proaste" pentru a deruta AI-ul..
-     desi e greu de crezut ca ar fi critic pentru ca e important si fitness-ul de baza
+    /*
+        Am ales in fibo sa implementez probabilitatea in felul urmator:
+        La p=0, este facut fibonacci redus(impartindu-se la 1.5, numerele cresc foarte putin la fiecare iteratie)
+        La p=50, este fibonacci normal (valorile * ~1.6 la fiecare alegere in plus)
+        La p=100, este fibonacci accelerat (dublat) (valorile *3.2 la fiecare alegere)
+        Pentru p mare, ar putea eventual exista riscul ca jucatorii sa aleaga intentionat alegeri "proaste" pentru a deruta AI-ul..
+        desi e greu de crezut ca ar fi critic pentru ca e important si fitness-ul de baza
     */
     async trainAi(blackCard, whiteCard) {
         let client;
@@ -183,7 +188,7 @@ class AI {
             let beforeRelation = await client.db("HumansAgainstCards").collection("blackcard_whitecard_relation").find({ blackCardId: blackCard, whiteCardId: whiteCard }).toArray();
 
             //aici vom incrementa categoria ultimei carti albe jucate:
-            this.categories[beforeRelation[0].category]++;
+            this.categories[beforeRelation[0].category.replace(/ /g, "_")]++;
             console.log(beforeRelation);
 
             let myQuery = { "blackCardId": blackCard, "whiteCardId": whiteCard };
